@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 520" width="1120" height="520" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="img" aria-label="Câblage — header 40 broches du Raspberry Pi 5">
+<rect width="1120" height="520" fill="#0f1115"/>
+<text x="28" y="42" fill="#8ab4f8" font-size="19" font-weight="bold">Câblage — header 40 broches du Raspberry Pi 5</text>
+<rect x="28" y="96" width="250" height="330" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="153.0" y="256.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Raspberry Pi 5</text>
+<text x="153.0" y="274.0" fill="#8b949e" font-size="11" text-anchor="middle">BCM2712 + RP1 alim 5 V</text>
+<text x="153.0" y="287.0" fill="#8b949e" font-size="11" text-anchor="middle">/ 3 A</text>
+<text x="44" y="132" fill="#d7dae0" font-size="13" text-anchor="start">GPIO2 / GPIO3</text>
+<text x="44" y="148" fill="#8b949e" font-size="11" text-anchor="start">SDA1 / SCL1 — bus I²C</text>
+<line x1="278" y1="138" x2="330" y2="138" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="330" cy="138" r="3.2" fill="#8b949e"/>
+<rect x="330" y="114" width="260" height="48" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="460.0" y="133.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Bus I²C</text>
+<text x="460.0" y="151.0" fill="#8b949e" font-size="11" text-anchor="middle">SHT31 · BH1750 ·</text>
+<text x="460.0" y="164.0" fill="#8b949e" font-size="11" text-anchor="middle">ADS1115</text>
+<text x="44" y="226" fill="#d7dae0" font-size="13" text-anchor="start">GPIO4</text>
+<text x="44" y="242" fill="#8b949e" font-size="11" text-anchor="start">1-Wire (pull-up 4,7 kΩ)</text>
+<line x1="278" y1="232" x2="330" y2="232" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="330" cy="232" r="3.2" fill="#8b949e"/>
+<rect x="330" y="208" width="260" height="48" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="460.0" y="227.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">1-Wire</text>
+<text x="460.0" y="245.0" fill="#8b949e" font-size="11" text-anchor="middle">DS18B20 étanche</text>
+<text x="44" y="320" fill="#d7dae0" font-size="13" text-anchor="start">GPIO17</text>
+<text x="44" y="336" fill="#8b949e" font-size="11" text-anchor="start">via 220 Ω — logique 3,3 V</text>
+<line x1="278" y1="326" x2="330" y2="326" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="330" cy="326" r="3.2" fill="#8b949e"/>
+<rect x="330" y="302" width="260" height="48" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="460.0" y="321.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Relais</text>
+<text x="460.0" y="339.0" fill="#8b949e" font-size="11" text-anchor="middle">module optocouplé</text>
+<text x="44" y="414" fill="#d7dae0" font-size="13" text-anchor="start">5 V / GND</text>
+<text x="44" y="430" fill="#8b949e" font-size="11" text-anchor="start">alimentation du Pi</text>
+<line x1="278" y1="420" x2="330" y2="420" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="330" cy="420" r="3.2" fill="#8b949e"/>
+<rect x="330" y="396" width="260" height="48" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="460.0" y="415.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">5 V / 3 A</text>
+<text x="460.0" y="433.0" fill="#8b949e" font-size="11" text-anchor="middle">USB-C</text>
+<rect x="660" y="132" width="200" height="96" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="760.0" y="175.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">SHT31</text>
+<text x="760.0" y="193.0" fill="#8b949e" font-size="11" text-anchor="middle">air : T° + humidité</text>
+<rect x="890" y="132" width="200" height="96" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="990.0" y="175.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">BH1750</text>
+<text x="990.0" y="193.0" fill="#8b949e" font-size="11" text-anchor="middle">lumière</text>
+<rect x="660" y="248" width="200" height="96" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="760.0" y="291.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">ADS1115</text>
+<text x="760.0" y="309.0" fill="#8b949e" font-size="11" text-anchor="middle">analogique → I²C</text>
+<rect x="890" y="248" width="200" height="96" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="990.0" y="291.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">DS18B20</text>
+<text x="990.0" y="309.0" fill="#8b949e" font-size="11" text-anchor="middle">température du sol</text>
+<rect x="660" y="364" width="430" height="76" rx="8" fill="#171a21" stroke="#e8a13d" stroke-width="1.6"/>
+<text x="875.0" y="397.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Pompe 12 V</text>
+<text x="875.0" y="415.0" fill="#8b949e" font-size="11" text-anchor="middle">alimentation séparée</text>
+<text x="875.0" y="428.0" fill="#8b949e" font-size="11" text-anchor="middle">12 V / 2 A</text>
+<line x1="590" y1="156" x2="660" y2="180" stroke="#57ab5a" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="660" cy="180" r="3.2" fill="#57ab5a"/>
+<line x1="590" y1="156" x2="890" y2="180" stroke="#57ab5a" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="890" cy="180" r="3.2" fill="#57ab5a"/>
+<line x1="590" y1="250" x2="660" y2="296" stroke="#57ab5a" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="660" cy="296" r="3.2" fill="#57ab5a"/>
+<line x1="590" y1="250" x2="890" y2="296" stroke="#57ab5a" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="890" cy="296" r="3.2" fill="#57ab5a"/>
+<line x1="590" y1="344" x2="660" y2="402" stroke="#e8a13d" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="660" cy="402" r="3.2" fill="#e8a13d"/>
+<text x="28" y="470" fill="#e8a13d" font-size="12" text-anchor="start">Jamais de 5 V sur le header. Le relais est alimenté en 12 V, le Pi en 5 V, jamais ensemble.</text>
+</svg>

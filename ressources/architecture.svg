@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="img" aria-label="Chaîne de mesure et d'arrosage — kit serre connectée">
+<rect width="1120" height="560" fill="#0f1115"/>
+<text x="28" y="42" fill="#8ab4f8" font-size="19" font-weight="bold">Chaîne de mesure et d'arrosage — kit serre connectée</text>
+<rect x="28" y="96" width="150" height="62" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="103.0" y="122.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">SHT31</text>
+<text x="103.0" y="140.0" fill="#8b949e" font-size="11" text-anchor="middle">air : T° + humidité</text>
+<text x="103.0" y="153.0" fill="#8b949e" font-size="11" text-anchor="middle">I²C</text>
+<line x1="178" y1="127" x2="232" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="232" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="28" y="180" width="150" height="62" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="103.0" y="206.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">BH1750</text>
+<text x="103.0" y="224.0" fill="#8b949e" font-size="11" text-anchor="middle">lumière I²C</text>
+<line x1="178" y1="211" x2="232" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="232" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="28" y="264" width="150" height="62" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="103.0" y="290.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">DS18B20</text>
+<text x="103.0" y="308.0" fill="#8b949e" font-size="11" text-anchor="middle">sol : T° 1-Wire</text>
+<line x1="178" y1="295" x2="232" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="232" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="28" y="348" width="150" height="62" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="103.0" y="374.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Capteur sol</text>
+<text x="103.0" y="392.0" fill="#8b949e" font-size="11" text-anchor="middle">humidité I²C + ADS1115</text>
+<line x1="178" y1="379" x2="232" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="232" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="232" y="232" width="170" height="72" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="317.0" y="263.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">capteurs.py</text>
+<text x="317.0" y="281.0" fill="#8b949e" font-size="11" text-anchor="middle">relevé périodique</text>
+<rect x="440" y="232" width="190" height="72" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="535.0" y="263.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">mosquitto</text>
+<text x="535.0" y="281.0" fill="#8b949e" font-size="11" text-anchor="middle">courtier MQTT locaux</text>
+<text x="535.0" y="294.0" fill="#8b949e" font-size="11" text-anchor="middle">127.0.0.1:1883</text>
+<line x1="402" y1="268" x2="440" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="440" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="672" y="232" width="190" height="72" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="767.0" y="263.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">collecteur.py</text>
+<text x="767.0" y="281.0" fill="#8b949e" font-size="11" text-anchor="middle">MQTT → SQLite rejet</text>
+<text x="767.0" y="294.0" fill="#8b949e" font-size="11" text-anchor="middle">hors plage</text>
+<line x1="630" y1="268" x2="672" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="672" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="906" y="232" width="186" height="72" rx="8" fill="#171a21" stroke="#8ab4f8" stroke-width="1.6"/>
+<text x="999.0" y="263.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">serre.db</text>
+<text x="999.0" y="281.0" fill="#8b949e" font-size="11" text-anchor="middle">SQLite clé (ts,</text>
+<text x="999.0" y="294.0" fill="#8b949e" font-size="11" text-anchor="middle">capteur)</text>
+<line x1="862" y1="268" x2="906" y2="268" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="906" cy="268" r="3.2" fill="#8b949e"/>
+<rect x="906" y="96" width="186" height="72" rx="8" fill="#171a21" stroke="#57ab5a" stroke-width="1.6"/>
+<text x="999.0" y="127.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">Grafana</text>
+<text x="999.0" y="145.0" fill="#8b949e" font-size="11" text-anchor="middle">tableau de bord</text>
+<text x="999.0" y="158.0" fill="#8b949e" font-size="11" text-anchor="middle">127.0.0.1:3000</text>
+<line x1="999" y1="232" x2="999" y2="168" stroke="#8b949e" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="999" cy="168" r="3.2" fill="#8b949e"/>
+<rect x="672" y="404" width="190" height="86" rx="8" fill="#171a21" stroke="#e8a13d" stroke-width="1.6"/>
+<text x="767.0" y="442.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">decision.py</text>
+<text x="767.0" y="460.0" fill="#8b949e" font-size="11" text-anchor="middle">4 conditions rejet si</text>
+<text x="767.0" y="473.0" fill="#8b949e" font-size="11" text-anchor="middle">l'une manque</text>
+<line x1="767" y1="304" x2="767" y2="404" stroke="#e8a13d" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="767" cy="404" r="3.2" fill="#e8a13d"/>
+<rect x="440" y="404" width="190" height="86" rx="8" fill="#171a21" stroke="#e8a13d" stroke-width="1.6"/>
+<text x="535.0" y="442.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">arrosage.py</text>
+<text x="535.0" y="460.0" fill="#8b949e" font-size="11" text-anchor="middle">relais GPIO17 ouvert =</text>
+<text x="535.0" y="473.0" fill="#8b949e" font-size="11" text-anchor="middle">pompe OFF</text>
+<line x1="672" y1="447" x2="630" y2="447" stroke="#e8a13d" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="630" cy="447" r="3.2" fill="#e8a13d"/>
+<rect x="232" y="404" width="170" height="86" rx="8" fill="#171a21" stroke="#e8a13d" stroke-width="1.6"/>
+<text x="317.0" y="442.0" fill="#d7dae0" font-size="14" text-anchor="middle" font-weight="bold">pompe 12 V</text>
+<text x="317.0" y="460.0" fill="#8b949e" font-size="11" text-anchor="middle">alimentation séparée</text>
+<line x1="440" y1="447" x2="402" y2="447" stroke="#e8a13d" stroke-width="1.6" stroke-dasharray="1 0"/>
+<circle cx="402" cy="447" r="3.2" fill="#e8a13d"/>
+<text x="28" y="512" fill="#8ab4f8" font-size="12" text-anchor="start">Règle : sol &lt; 25 % ET cuve pleine ET 06h–21h ET délai ≥ 10 min.</text>
+<text x="28" y="534" fill="#8b949e" font-size="12" text-anchor="start">Un capteur absent, une cuve vide ou un horaire interdit bloque l'arrosage.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="img" aria-label="Ce qui est livré — kit-serre-v1.0">
+<rect width="900" height="470" fill="#0f1115"/>
+<text x="28" y="42" fill="#8ab4f8" font-size="19" font-weight="bold">Ce qui est livré — kit-serre-v1.0</text>
+<text x="52" y="96" fill="#d7dae0" font-size="13" text-anchor="start">guide.pdf</text>
+<text x="360" y="96" fill="#8b949e" font-size="12" text-anchor="start">7 pages, la méthode complète</text>
+<text x="52" y="126" fill="#8b949e" font-size="13" text-anchor="start">examples/</text>
+<text x="52" y="156" fill="#d7dae0" font-size="13" text-anchor="start">  capteurs.py</text>
+<text x="360" y="156" fill="#8b949e" font-size="12" text-anchor="start">relevé SHT31 / BH1750 / DS18B20</text>
+<text x="52" y="186" fill="#d7dae0" font-size="13" text-anchor="start">  collecteur.py</text>
+<text x="360" y="186" fill="#8b949e" font-size="12" text-anchor="start">MQTT → SQLite, rejet des valeurs</text>
+<text x="52" y="216" fill="#d7dae0" font-size="13" text-anchor="start">  arrosage.py</text>
+<text x="360" y="216" fill="#8b949e" font-size="12" text-anchor="start">relais, chien de garde</text>
+<text x="52" y="246" fill="#d7dae0" font-size="13" text-anchor="start">  decision.py</text>
+<text x="360" y="246" fill="#8b949e" font-size="12" text-anchor="start">la décision sans toucher au relais</text>
+<text x="52" y="276" fill="#d7dae0" font-size="13" text-anchor="start">  publier.py</text>
+<text x="360" y="276" fill="#8b949e" font-size="12" text-anchor="start">publie un cycle de mesures</text>
+<text x="52" y="306" fill="#8b949e" font-size="13" text-anchor="start">  config.yaml</text>
+<text x="360" y="306" fill="#8b949e" font-size="12" text-anchor="start">configuration d'exemple</text>
+<text x="52" y="336" fill="#8b949e" font-size="13" text-anchor="start">  dashboard.json</text>
+<text x="360" y="336" fill="#8b949e" font-size="12" text-anchor="start">tableau de bord Grafana</text>
+<text x="52" y="366" fill="#d7dae0" font-size="13" text-anchor="start">tests/test_kit.py</text>
+<text x="360" y="366" fill="#8b949e" font-size="12" text-anchor="start">18 tests, sans matériel</text>
+<text x="52" y="396" fill="#8b949e" font-size="13" text-anchor="start">pieces.csv</text>
+<text x="360" y="396" fill="#8b949e" font-size="12" text-anchor="start">liste de pièces et prix indicatifs</text>
+<text x="52" y="446" fill="#8ab4f8" font-size="12" text-anchor="start">Total : 1 guide + 11 fichiers, aucune dépendance externe pour le collecteur.</text>
+</svg>

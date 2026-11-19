@@ -90,7 +90,7 @@ NOUVEAU PAIEMENT — USDC : transaction 0xdef
 BTC ignoré : RPC indisponible
 USDC ignoré : RPC indisponible
 ----------------------------------------------------------------------
-Ran 17 tests in 0.009s
+Ran 17 tests in 0.010s
 
 OK</code></pre>
     </div>
@@ -98,7 +98,7 @@ OK</code></pre>
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>454</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>465</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
@@ -113,15 +113,15 @@ active</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-18T23:25:49-05:00
-  température   42.8 °C   (24 h : min 38.9 / moy 42.03 / max 47.2)
+Dernier échantillon : 2026-11-18T23:37:28-05:00
+  température   43.9 °C   (24 h : min 38.9 / moy 42.08 / max 47.2)
   throttled    0x0
   tension cœur  0.8336 V
-  uptime        7.7 h   charge 0.15
-  mémoire dispo 14605.1 Mo   zram 0.0 Mo
-  disque        9.84 %   (24 h max 9.85 %)
+  uptime        7.9 h   charge 0.44
+  mémoire dispo 14539.0 Mo   zram 0.0 Mo
+  disque        9.85 %   (24 h max 9.85 %)
   unités en échec 0   wlan -62.0 dBm   ntp oui
-  échantillons 24 h : 454   événements throttle : 0
+  échantillons 24 h : 465   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -129,7 +129,7 @@ Dernier échantillon : 2026-11-18T23:25:49-05:00
     <div class="preuve-bloc">
       <p class="preuve-titre">Sauvegardes du vault conservées</p>
       <pre><code>find backups -name &#39;vault-*.bundle&#39; | wc -l
-22</code></pre>
+23</code></pre>
     </div>
 
     <h2 id="fichiers">Files</h2>
