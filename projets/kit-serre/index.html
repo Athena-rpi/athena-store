@@ -109,6 +109,24 @@ volontairement le <strong>dernier</strong> composant du guide, pas le premier.</
 seuil, cuve pleine, dans la fenêtre horaire, et un délai écoulé depuis le
 dernier cycle. Un capteur absent ou une cuve vide <strong>bloque</strong> l&rsquo;arrosage. C&rsquo;est
 écrit, testé, et c&rsquo;est le genre de détail qui évite de noyer une serre.</p>
+<h2 id="la-règle-en-conditions-réelles">La règle, en conditions réelles</h2>
+<div class="exemple">
+<h3 id="sol-sec-cuve-pleine-midi-la-pompe-démarre">Sol sec, cuve pleine, midi — la pompe démarre</h3><div class="exemple-col"><p class="exemple-etiquette">commande</p><pre><code>python3 decision.py --sol 20 --cuve 1 --depuis 900 --heure 12</code></pre></div><div class="exemple-col"><p class="exemple-etiquette">sortie</p><pre><code>sol 20.0 % (seuil 25 %), cuve pleine, dernier cycle il y a 900 s
+heure locale 12h00 (fenêtre 6h–21h)
+conditions :
+  sol &lt; 25 %          : oui
+  cuve pleine         : oui
+  dans la fenêtre horaire : oui
+  délai &gt;= 600 s      : oui
+décision : POMPE ON</code></pre></div></div>
+<div class="exemple">
+<h3 id="sol-humide-la-pompe-reste-à-lrsquoarrêt">Sol humide — la pompe reste à l&rsquo;arrêt</h3><div class="exemple-col"><p class="exemple-etiquette">commande</p><pre><code>python3 decision.py --sol 80 --cuve 1 --depuis 900 --heure 12</code></pre></div><div class="exemple-col"><p class="exemple-etiquette">sortie</p><pre><code>sol 80.0 % (seuil 25 %), cuve pleine, dernier cycle il y a 900 s
+conditions :
+  sol &lt; 25 %          : non
+  cuve pleine         : oui
+  dans la fenêtre horaire : oui
+  délai &gt;= 600 s      : oui
+décision : POMPE OFF</code></pre></div></div>
 <h2 id="aperçu-du-guide">Aperçu du guide</h2>
 <p><img alt="Page de couverture du guide" src="../../ressources/extrait-kit-page-1.png" />
 <img alt="Page intérieure : l'arrosage et les sécurités" src="../../ressources/extrait-kit-page-4.png" />
