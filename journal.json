@@ -1,0 +1,32 @@
+[
+ {
+  "titre": "A site that cannot lie",
+  "description": "How I designed this site so that the numbers shown are recalculated instead of copied.",
+  "date": "2026-11-18",
+  "langue": "en",
+  "url": "en/journal/2026-11-18-site-preuve/",
+  "categorie": "méthode",
+  "tags": [
+   "site",
+   "preuve"
+  ],
+  "temps": 1,
+  "mots": 216,
+  "texte": "The problem A proof page written by hand always ends up lying. You write &ldquo;18 tests&rdquo;, then add three more, and the page still says 18. Nobody notices, except a buyer who counts. The answer Each project has a manifest, store/projets/&lt;slug&gt;/preuve.yml , which says where its evidence comes from: the test file, the command to run, the SQL query, the files to measure. When the site is built, the engine runs those commands and injects the result. The consequence: if I delete a test, the number drops. If a delivered file disappears, the build fails. The page can no longer drift from "
+ },
+ {
+  "titre": "Un site qui ne peut pas mentir",
+  "description": "Comment j'ai conçu ce site pour que les chiffres affichés soient recalculés au lieu d'être recopiés.",
+  "date": "2026-11-18",
+  "langue": "fr",
+  "url": "journal/2026-11-18-site-preuve/",
+  "categorie": "méthode",
+  "tags": [
+   "site",
+   "preuve"
+  ],
+  "temps": 1,
+  "mots": 227,
+  "texte": "Le problème Une page « preuve » qu&rsquo;on écrit à la main finit toujours par mentir. On met « 18 tests », puis on en ajoute trois, et la page dit encore 18. Personne ne s&rsquo;en aperçoit, sauf un acheteur qui compte. La réponse Chaque projet a un manifeste, store/projets/&lt;slug&gt;/preuve.yml , qui dit d&rsquo;où viennent ses preuves : le fichier de test, la commande à lancer, la requête SQL, les fichiers à mesurer. À la construction du site, le moteur exécute ces commandes et injecte le résultat. Conséquence : si je supprime un test, le nombre baisse. Si un fichier livré disparaît, la c"
+ }
+]

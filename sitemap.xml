@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://athena-rpi.github.io/athena-store/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/a-propos/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/demarrer/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/en/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
+  </url>
+  <url>
     <loc>https://athena-rpi.github.io/athena-store/en/a-propos/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
@@ -19,10 +43,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/faq/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/</loc>
+    <loc>https://athena-rpi.github.io/athena-store/en/journal/</loc>
     <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/</loc>
@@ -31,16 +55,21 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/</loc>
+    <loc>https://athena-rpi.github.io/athena-store/en/journal/categorie/méthode/</loc>
     <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/categorie/méthode/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/en/legal/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/legal/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/legal/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/en/projets/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/en/projets/athena-pi/</loc>
@@ -59,12 +88,6 @@
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/"/>
-  </url>
-  <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/en/projets/kit-serre/</loc>
@@ -115,34 +138,10 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/a-propos/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
-  </url>
-  <url>
-    <loc>https://athena-rpi.github.io/athena-store/demarrer/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
-  </url>
-  <url>
     <loc>https://athena-rpi.github.io/athena-store/faq/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/faq/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/faq/"/>
-  </url>
-  <url>
-    <loc>https://athena-rpi.github.io/athena-store/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
-  </url>
-  <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/journal/</loc>
@@ -151,10 +150,27 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/"/>
   </url>
   <url>
+    <loc>https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/journal/categorie/méthode/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/categorie/méthode/"/>
+  </url>
+  <url>
     <loc>https://athena-rpi.github.io/athena-store/legal/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/legal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/legal/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/projets/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/projets/athena-pi/</loc>
@@ -173,12 +189,6 @@
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/"/>
-  </url>
-  <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/projets/kit-serre/</loc>

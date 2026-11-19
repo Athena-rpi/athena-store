@@ -49,29 +49,93 @@
 </header>
 
 <main id="contenu" class="conteneur">
-<article class="page">
-  <header class="page-entete">
-    <h1>Journal</h1>
-<p class="lede">What I build, in the order it happens.</p>  </header>
+<div class="journal-masthead">
+  <p class="sur-titre">Journal</p>
+  <h1>Journal</h1>
+<p class="lede">What I build, in the order it happens.</p>  <p class="journal-filtres">
+    <span data-compte>1 articles</span>
+    <span class="separateur" aria-hidden="true">·</span>
+    <a href="../../en/journal.xml">feed</a>
+    <span class="separateur" aria-hidden="true">·</span>
+    <a href="../../journal.json">search index</a>
+  </p>
 
-  <div class="liste-articles">
-    <article class="article-ligne">
-      <p class="article-date">2026-11-18</p>
-      <h2><a href="../../en/journal/2026-11-18-site-preuve/">A site that cannot lie</a></h2>
-<p>How I designed this site so that the numbers shown are recalculated instead of copied.</p>    </article>
+  <div class="journal-recherche">
+    <label class="regroupe" for="recherche">
+      <span>Search the journal</span>
+      <input type="search" id="recherche" data-index="../../journal.json"
+             autocomplete="off">
+    </label>
+    <p class="recherche-aide">Search covers titles, descriptions, categories and tags.</p>
+  </div>
+</div>
+
+
+<div class="journal-grille">
+  <div class="journal-liste">
+    <div class="liste-articles" data-liste >
+      <article class="article-ligne"                data-cles="a site that cannot lie how i designed this site so that the numbers shown are recalculated instead of copied. méthode site preuve">
+        <a class="article-vignette" href="../../en/journal/2026-11-18-site-preuve/">
+          <img src="../../couvertures/journal-2026-11-18-site-preuve.svg" alt="" loading="lazy">
+        </a>
+        <div class="article-ligne-corps">
+          <p class="article-meta">
+            <time datetime="2026-11-18">2026-11-18</time>
+ · <span class="puce">méthode</span>            · 1 min
+          </p>
+          <h2><a href="../../en/journal/2026-11-18-site-preuve/">A site that cannot lie</a></h2>
+<p>How I designed this site so that the numbers shown are recalculated instead of copied.</p>          <p class="article-tags">
+<span class="etiquette">site</span><span class="etiquette">preuve</span>          </p>
+        </div>
+      </article>
+    </div>
+    <p class="recherche-vide" data-vide hidden>No article matches.</p>
   </div>
 
-  <div class="corps">
-  <p>One article per milestone. No promised schedule: I write when something is
-finished and verified.</p>
-  </div>
-</article>
+  <aside class="journal-laterale">
+    <section class="journal-bloc">
+      <h2>Categories</h2>
+      <ul class="journal-liens">
+        <li>
+          <a href="../../journal/categorie/méthode/">
+            <span>méthode</span>
+            <small>La manière de travailler : les choix, les raisons, les erreurs.</small>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="journal-bloc">
+      <h2>Tags</h2>
+      <p class="journal-etiquettes">
+<span class="etiquette">preuve</span><span class="etiquette">site</span>      </p>
+    </section>
+
+    <section class="journal-bloc">
+      <h2>Archives</h2>
+      <ul class="journal-archives">
+        <li>
+          <p class="archive-annee">2026 <span>1</span></p>
+          <ul>
+            <li>
+              <a href="../../journal/#2026-11">
+                2026 novembre <span>1</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<script src="../../assets/widgets/recherche.js" defer></script>
 </main>
 
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-18 ·
+    <p class="pied-meta">Addresses checked on 2026-11-19 ·
        <a href="../../en/projets/">Projects</a>
     </p>
   </div>

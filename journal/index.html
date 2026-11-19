@@ -49,29 +49,93 @@
 </header>
 
 <main id="contenu" class="conteneur">
-<article class="page">
-  <header class="page-entete">
-    <h1>Journal</h1>
-<p class="lede">Ce que je construis, dans l&#39;ordre où ça arrive.</p>  </header>
+<div class="journal-masthead">
+  <p class="sur-titre">Journal</p>
+  <h1>Journal</h1>
+<p class="lede">Ce que je construis, dans l&#39;ordre où ça arrive.</p>  <p class="journal-filtres">
+    <span data-compte>1 articles</span>
+    <span class="separateur" aria-hidden="true">·</span>
+    <a href="../journal.xml">flux</a>
+    <span class="separateur" aria-hidden="true">·</span>
+    <a href="../journal.json">index de recherche</a>
+  </p>
 
-  <div class="liste-articles">
-    <article class="article-ligne">
-      <p class="article-date">2026-11-18</p>
-      <h2><a href="../journal/2026-11-18-site-preuve/">Un site qui ne peut pas mentir</a></h2>
-<p>Comment j&#39;ai conçu ce site pour que les chiffres affichés soient recalculés au lieu d&#39;être recopiés.</p>    </article>
+  <div class="journal-recherche">
+    <label class="regroupe" for="recherche">
+      <span>Rechercher dans le journal</span>
+      <input type="search" id="recherche" data-index="../journal.json"
+             autocomplete="off">
+    </label>
+    <p class="recherche-aide">La recherche porte sur les titres, les descriptions, les rubriques et les étiquettes.</p>
+  </div>
+</div>
+
+
+<div class="journal-grille">
+  <div class="journal-liste">
+    <div class="liste-articles" data-liste >
+      <article class="article-ligne"                data-cles="un site qui ne peut pas mentir comment j&#39;ai conçu ce site pour que les chiffres affichés soient recalculés au lieu d&#39;être recopiés. méthode site preuve">
+        <a class="article-vignette" href="../journal/2026-11-18-site-preuve/">
+          <img src="../couvertures/journal-2026-11-18-site-preuve.svg" alt="" loading="lazy">
+        </a>
+        <div class="article-ligne-corps">
+          <p class="article-meta">
+            <time datetime="2026-11-18">2026-11-18</time>
+ · <span class="puce">méthode</span>            · 1 min
+          </p>
+          <h2><a href="../journal/2026-11-18-site-preuve/">Un site qui ne peut pas mentir</a></h2>
+<p>Comment j&#39;ai conçu ce site pour que les chiffres affichés soient recalculés au lieu d&#39;être recopiés.</p>          <p class="article-tags">
+<span class="etiquette">site</span><span class="etiquette">preuve</span>          </p>
+        </div>
+      </article>
+    </div>
+    <p class="recherche-vide" data-vide hidden>Aucun article ne correspond.</p>
   </div>
 
-  <div class="corps">
-  <p>Un article par avancement. Pas de calendrier promis : j&rsquo;écris quand quelque
-chose est fini et vérifié.</p>
-  </div>
-</article>
+  <aside class="journal-laterale">
+    <section class="journal-bloc">
+      <h2>Rubriques</h2>
+      <ul class="journal-liens">
+        <li>
+          <a href="../journal/categorie/méthode/">
+            <span>méthode</span>
+            <small>La manière de travailler : les choix, les raisons, les erreurs.</small>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="journal-bloc">
+      <h2>Étiquettes</h2>
+      <p class="journal-etiquettes">
+<span class="etiquette">preuve</span><span class="etiquette">site</span>      </p>
+    </section>
+
+    <section class="journal-bloc">
+      <h2>Archives</h2>
+      <ul class="journal-archives">
+        <li>
+          <p class="archive-annee">2026 <span>1</span></p>
+          <ul>
+            <li>
+              <a href="../journal/#2026-11">
+                2026 novembre <span>1</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<script src="../assets/widgets/recherche.js" defer></script>
 </main>
 
 <footer class="pied">
   <div class="conteneur">
     <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
-    <p class="pied-meta">Adresses vérifiées le 2026-11-18 ·
+    <p class="pied-meta">Adresses vérifiées le 2026-11-19 ·
        <a href="../projets/">Projets</a>
     </p>
   </div>

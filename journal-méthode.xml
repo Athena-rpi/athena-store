@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Athéna — méthode</title>
+  <link href="https://athena-rpi.github.io/athena-store/journal/categorie/méthode/"/>
+  <id>https://athena-rpi.github.io/athena-store/journal/categorie/méthode/</id>
+  <updated>2026-11-19</updated>
+  <entry>
+    <title>Un site qui ne peut pas mentir</title>
+    <link href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
+    <id>https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/</id>
+    <updated>2026-11-18</updated>
+    <summary>Comment j'ai conçu ce site pour que les chiffres affichés soient recalculés au lieu d'être recopiés.</summary>
+  </entry>
+</feed>
