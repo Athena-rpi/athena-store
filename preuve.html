@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Athéna — la preuve</title>
+<style>
+ body{background:#0f1115;color:#d7dae0;font:16px/1.6 ui-monospace,Menlo,Consolas,monospace;
+      margin:0;padding:2rem;max-width:52rem}
+ h1{font-size:1.2rem;letter-spacing:.06em;color:#8ab4f8;margin:0 0 .5rem}
+ h2{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#7d8590;margin:2rem 0 .6rem}
+ p{color:#b6bdc7}
+ code,.bloc{background:#171a21;border:1px solid #262b36;border-radius:.4rem;
+             padding:.5rem .7rem;display:block;word-break:break-all;font-size:.85rem}
+ .bloc{white-space:pre-wrap;font-size:.8rem;color:#9aa3ae}
+ footer{margin-top:2.5rem;color:#6e7681;font-size:.8rem;border-top:1px solid #262b36;padding-top:1rem}
+ a{color:#8ab4f8}
+ img{max-width:100%;border:1px solid #262b36;border-radius:.4rem;margin:1rem 0}
+ .ok{color:#57ab5a} .lim{color:#e8a13d}
+</style></head><body>
+
+<h1>La preuve</h1>
+<p>Ce projet n'a pas de vidéo de démonstration ni de témoignage client. Il a des
+faits. Voici ce qui est <b>réellement exécuté</b>, et ce qui ne l'est pas.</p>
+
+<h2>Chaîne de mesure, testée de bout en bout</h2>
+<p>Le 18 novembre 2026, sur le Raspberry Pi 5 : publication MQTT → collecteur →
+SQLite → Grafana. Relevé réel :</p>
+<div class="bloc">mosquitto_pub -t serre/air/temperature -m 23.4
+mosquitto_pub -t serre/air/humidite    -m 58
+mosquitto_pub -t serre/lux             -m 12430
+mosquitto_pub -t serre/sol/humidite    -m 41
+mosquitto_pub -t serre/sol/temperature -m 18.9
+
+sqlite> select count(*) from mesures;   --> 5
+rejeté (hors plage -10.0..60.0) : serre/air/temperature = 999.0
+topic inconnu ignoré : serre/inconnu</div>
+<p>Les 5 requêtes du tableau de bord répondent dans Grafana : 24 points par
+série, colonne d'heure typée <code>time</code>.</p>
+
+<img src="assets/serre-24h.png" alt="Relevé des dernières 24 h : températures, humidité, lumière">
+
+<h2>Tests</h2>
+<p>35 tests, uniquement <code>stdlib</code>, qui tournent sans matériel :</p>
+<div class="bloc">couche Athéna :  12 tests — conditions d'alerte, déduplication 6 h
+surveillance     :   5 tests — idempotence, erreurs réseau, état incomplet
+kit serre        :  18 tests — CRC Sensirion, rejets, décision d'arrosage</div>
+<p>Le CRC est vérifié contre le vecteur de référence des fiches Sensirion
+(CRC de <code>0xBEEF</code> = <code>0x92</code>). Un test de régression protège la
+clé primaire <code>(ts, capteur)</code>, après qu'un bug l'ait fait perdre des
+mesures.</p>
+
+<h2>Adresses de paiement, relevées</h2>
+<p>Les deux adresses ci-dessous sont relues depuis le portefeuille au moment de
+générer cette page — elles ne sont jamais copiées à la main :</p>
+<code>USDC (Base) : 0xf50884fDB9680C312413dB72dec6E5843ce934eA</code>
+<code>BTC : bc1q540xrkwz7tywqduvel6n96nvar9ddexmsmhfch</code>
+
+<h2>Ce que le paiement ne peut pas faire</h2>
+<p>Un paiement USDC sur Base est <b>irréversible</b>. Il n'y a ni
+chargeback ni plateforme pour annuler. Vérifiez l'adresse <b>et</b> le montant
+avant d'envoyer, et gardez le hachage de la transaction : c'est votre seul
+relevé.</p>
+
+<h2>Ce qui n'est pas prouvé</h2>
+<p class="lim">Le guide du kit a été écrit et vérifié sur un Pi 5 sous Debian 13,
+mais <b>aucun capteur n'a été branché</b> au moment de la rédaction : les valeurs
+ci-dessus proviennent d'une base de démonstration. Le code est écrit pour être
+vérifié, pas pour être cru — le guide le dit lui-même.</p>
+<p class="lim">La livraison se fait par courriel depuis
+<code>athena_rpi@proton.me</code>. Le canal a été testé (message présent dans les
+envoyés), mais il n'y a ni accusé de réception automatique ni suivi de lecture.</p>
+
+<footer>
+ Les chiffres de cette page proviennent des journaux du Pi, pas d'une promesse.
+ <a href="index.html">Retour à la boutique</a>
+</footer>
+
+</body></html>
