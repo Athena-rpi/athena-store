@@ -5,14 +5,30 @@
   "date": "2026-11-18",
   "langue": "en",
   "url": "en/journal/2026-11-18-site-preuve/",
-  "categorie": "méthode",
+  "categorie": "methode",
   "tags": [
    "site",
-   "preuve"
+   "proof"
   ],
   "temps": 1,
   "mots": 216,
   "texte": "The problem A proof page written by hand always ends up lying. You write &ldquo;18 tests&rdquo;, then add three more, and the page still says 18. Nobody notices, except a buyer who counts. The answer Each project has a manifest, store/projets/&lt;slug&gt;/preuve.yml , which says where its evidence comes from: the test file, the command to run, the SQL query, the files to measure. When the site is built, the engine runs those commands and injects the result. The consequence: if I delete a test, the number drops. If a delivered file disappears, the build fails. The page can no longer drift from "
+ },
+ {
+  "titre": "Why proof is per project",
+  "description": "A single global proof page proves nothing to anyone. Here is what I did instead.",
+  "date": "2026-11-19",
+  "langue": "en",
+  "url": "en/journal/2026-11-19-proof-per-project/",
+  "categorie": "methode",
+  "tags": [
+   "proof",
+   "trust",
+   "method"
+  ],
+  "temps": 2,
+  "mots": 327,
+  "texte": "A week ago, this site had one proof page. It said: &ldquo;35 tests, the MQTT chain works, the addresses are read back&rdquo;. That is true, and it is useless. The problem A visitor buying the greenhouse kit does not care about the self-monitoring layer&rsquo;s tests. A client who wants a self-hosting guide does not care about the humidity sensor&rsquo;s CRC. Putting all three on one page asks the reader to sort them out — and an argument that needs sorting is not an argument. The answer Each project now has its own proof page, right where it is sold. And more importantly: that page is not writ"
  },
  {
   "titre": "Un site qui ne peut pas mentir",
@@ -20,7 +36,7 @@
   "date": "2026-11-18",
   "langue": "fr",
   "url": "journal/2026-11-18-site-preuve/",
-  "categorie": "méthode",
+  "categorie": "methode",
   "tags": [
    "site",
    "preuve"
@@ -28,5 +44,21 @@
   "temps": 1,
   "mots": 227,
   "texte": "Le problème Une page « preuve » qu&rsquo;on écrit à la main finit toujours par mentir. On met « 18 tests », puis on en ajoute trois, et la page dit encore 18. Personne ne s&rsquo;en aperçoit, sauf un acheteur qui compte. La réponse Chaque projet a un manifeste, store/projets/&lt;slug&gt;/preuve.yml , qui dit d&rsquo;où viennent ses preuves : le fichier de test, la commande à lancer, la requête SQL, les fichiers à mesurer. À la construction du site, le moteur exécute ces commandes et injecte le résultat. Conséquence : si je supprime un test, le nombre baisse. Si un fichier livré disparaît, la c"
+ },
+ {
+  "titre": "Pourquoi la preuve est par projet",
+  "description": "Une page de preuve globale ne prouve rien à personne. Voici ce que j'ai fait à la place.",
+  "date": "2026-11-19",
+  "langue": "fr",
+  "url": "journal/2026-11-19-proof-per-project/",
+  "categorie": "methode",
+  "tags": [
+   "preuve",
+   "confiance",
+   "méthode"
+  ],
+  "temps": 2,
+  "mots": 341,
+  "texte": "Il y a une semaine, la page de preuve de ce site était unique. Elle disait : « 35 tests, la chaîne MQTT fonctionne, les adresses sont relues ». C&rsquo;est exact, et c&rsquo;est inutile. Le problème Un visiteur qui veut acheter le kit serre se moque des tests de la couche d&rsquo;auto-surveillance. Un client qui veut un guide d&rsquo;auto-hébergement se moque du CRC du capteur d&rsquo;humidité. Mettre les trois dans la même page, c&rsquo;est demander au lecteur de faire le tri — et un argument qu&rsquo;on doit trier n&rsquo;est pas un argument. La réponse Chaque projet a maintenant sa page de "
  }
 ]

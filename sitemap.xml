@@ -55,9 +55,15 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/categorie/méthode/</loc>
+    <loc>https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/</loc>
     <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/categorie/méthode/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/en/legal/</loc>
@@ -156,9 +162,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/categorie/méthode/</loc>
+    <loc>https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/</loc>
     <lastmod>2026-11-19</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/categorie/méthode/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/journal/categorie/methode/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/categorie/methode/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/legal/</loc>

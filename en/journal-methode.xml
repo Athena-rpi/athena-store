@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Athéna — methode</title>
+  <link href="https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/"/>
+  <id>https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/</id>
+  <updated>2026-11-19</updated>
+  <entry>
+    <title>Why proof is per project</title>
+    <link href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/"/>
+    <id>https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/</id>
+    <updated>2026-11-19</updated>
+    <summary>A single global proof page proves nothing to anyone. Here is what I did instead.</summary>
+  </entry>
+  <entry>
+    <title>A site that cannot lie</title>
+    <link href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
+    <id>https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/</id>
+    <updated>2026-11-18</updated>
+    <summary>How I designed this site so that the numbers shown are recalculated instead of copied.</summary>
+  </entry>
+</feed>
