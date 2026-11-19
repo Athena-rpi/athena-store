@@ -32,7 +32,7 @@
 
     <nav class="nav" aria-label="Sur cette page">
       <ul>
-        <li><a href="../../../">Documentation technique pour serres et microcontrôleurs</a></li>
+        <li><a href="../../../">Accueil</a></li>
         <li><a href="../../../projets/">Projets</a></li>
         <li><a href="../../../a-propos/">À propos</a></li>
         <li><a href="../../../faq/">FAQ</a></li>
@@ -99,7 +99,7 @@ OK</code></pre>
     <h2 id="compteurs">Compteurs</h2>
     <table>
       <tr><th>Compteurs</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>445</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>449</code></td></tr>
     </table>
 
     <h2 id="commandes">Commandes</h2>
@@ -114,15 +114,15 @@ active</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-18T23:16:26-05:00
-  température   42.2 °C   (24 h : min 38.9 / moy 42.0 / max 47.2)
+Dernier échantillon : 2026-11-18T23:20:36-05:00
+  température   44.4 °C   (24 h : min 38.9 / moy 42.02 / max 47.2)
   throttled    0x0
-  tension cœur  0.7511 V
-  uptime        7.5 h   charge 0.2
-  mémoire dispo 14546.4 Mo   zram 0.0 Mo
-  disque        9.84 %   (24 h max 9.84 %)
-  unités en échec 0   wlan -62.0 dBm   ntp oui
-  échantillons 24 h : 445   événements throttle : 0
+  tension cœur  0.8336 V
+  uptime        7.6 h   charge 0.14
+  mémoire dispo 14292.3 Mo   zram 0.0 Mo
+  disque        9.85 %   (24 h max 9.85 %)
+  unités en échec 0   wlan -63.0 dBm   ntp oui
+  échantillons 24 h : 449   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -130,7 +130,7 @@ Dernier échantillon : 2026-11-18T23:16:26-05:00
     <div class="preuve-bloc">
       <p class="preuve-titre">Sauvegardes du vault conservées</p>
       <pre><code>find backups -name &#39;vault-*.bundle&#39; | wc -l
-21</code></pre>
+22</code></pre>
     </div>
 
     <h2 id="fichiers">Fichiers</h2>
