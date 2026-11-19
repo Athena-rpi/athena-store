@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation — Kit serre connectée — Athéna</title>
+<meta name="description" content="Le contenu du kit, les prérequis et la marche à suivre."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/">
+<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/documentation/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Documentation — Kit serre connectée">
+<meta property="og:description" content="Le contenu du kit, les prérequis et la marche à suivre."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">Sur cette page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../../">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Agent résident d&#39;un Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>Sur cette page</span></label>
+
+    <nav class="nav" aria-label="Sur cette page">
+      <ul>
+        <li><a href="../../../">Documentation technique pour serres et microcontrôleurs</a></li>
+        <li><a href="../../../projets/index/">Projets</a></li>
+        <li><a href="../../../a-propos/">À propos</a></li>
+        <li><a href="../../../faq/">FAQ</a></li>
+        <li><a href="../../../legal/">Mentions légales</a></li>
+        <li><a href="../../../journal/index/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../../en/projets/kit-serre/documentation/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page documentation">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane">
+    <a href="../../../projets/index/">Projets</a>
+    <span aria-hidden="true">/</span>
+<a href="../../../projets/kit-serre/">Kit serre connectée</a>
+    <span aria-hidden="true">/</span>    <span>Documentation</span>
+  </nav>
+
+  <header class="page-entete">
+    <h1>Documentation — Kit serre connectée</h1>
+<p class="lede">Le contenu du kit, les prérequis et la marche à suivre.</p>  </header>
+
+  <nav class="plan" aria-label="Sur cette page">
+    <p class="plan-titre">Sur cette page</p>
+    <ul>
+      <li><a href="#prérequis">Prérequis</a></li>
+      <li><a href="#fichiers-livrés">Fichiers livrés</a></li>
+      <li><a href="#marche-à-suivre">Marche à suivre</a></li>
+    </ul>
+  </nav>
+
+  <div class="corps">
+  <h2 id="prérequis">Prérequis</h2>
+<ul>
+<li>Un Raspberry Pi (le guide est écrit sur un Pi 5 sous Debian 13) ;</li>
+<li><code>mosquitto</code> et <code>mosquitto-clients</code> ;</li>
+<li>Python 3 avec la bibliothèque standard seulement — <strong>aucune dépendance
+  externe</strong> pour le collecteur et la décision d&rsquo;arrosage.</li>
+</ul>
+<h2 id="fichiers-livrés">Fichiers livrés</h2>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>examples/capteurs.py</code></td>
+<td>lecture SHT31 (I2C), BH1750, DS18B20 (1-Wire)</td>
+</tr>
+<tr>
+<td><code>examples/collecteur.py</code></td>
+<td>abonné MQTT → SQLite, avec rejet des valeurs</td>
+</tr>
+<tr>
+<td><code>examples/arrosage.py</code></td>
+<td>relais, chien de garde, arrêt sur défaut</td>
+</tr>
+<tr>
+<td><code>examples/decision.py</code></td>
+<td>affiche la décision sans toucher au relais</td>
+</tr>
+<tr>
+<td><code>examples/publier.py</code></td>
+<td>publie un cycle de mesures</td>
+</tr>
+<tr>
+<td><code>examples/config.yaml</code></td>
+<td>configuration d&rsquo;exemple</td>
+</tr>
+<tr>
+<td><code>examples/dashboard.json</code></td>
+<td>tableau de bord Grafana</td>
+</tr>
+<tr>
+<td><code>tests/test_kit.py</code></td>
+<td>les 18 tests</td>
+</tr>
+</tbody>
+</table>
+<h2 id="marche-à-suivre">Marche à suivre</h2>
+<ol>
+<li>Monter le matériel, <strong>tout débranché</strong>.</li>
+<li>Activer I2C et 1-Wire, redémarrer, vérifier <code>i2cdetect</code> et <code>/sys/bus/w1</code>.</li>
+<li>Lancer <code>capteurs.py</code> : les valeurs sont-elles plausibles ?</li>
+<li>Démarrer Mosquitto, publier un message de test.</li>
+<li>Lancer le collecteur, vérifier la table SQLite.</li>
+<li>Importer le tableau de bord.</li>
+<li><strong>Enfin</strong> brancher le relais et la pompe.</li>
+</ol>
+<div class="note">
+<p>L&rsquo;ordre compte : le relais est le dernier composant branché, jamais le
+premier. C&rsquo;est écrit dans le guide et c&rsquo;est un test de régression qui protège
+la clé primaire de la base.</p>
+</div>
+  </div>
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
+    <p class="pied-meta">Adresses vérifiées le 2026-11-18 ·
+       <a href="../../../projets/index/">Projets</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>

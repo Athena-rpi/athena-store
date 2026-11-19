@@ -376,6 +376,191 @@ a:focus-visible, button:focus-visible {
   .conteneur { max-width: 100%; }
 }
 
+/* ---------------------------------------------------------- composants v0.2 */
+
+.sur-titre {
+  margin: 0 0 .3rem;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+}
+
+.prix-projet { font-size: 1.05rem; margin: .4rem 0 0; }
+.prix-projet .etiquette {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+  margin-right: .4rem;
+}
+.prix-projet strong { color: var(--accent); }
+.etat {
+  display: inline-block;
+  margin-top: .6rem;
+  padding: .25rem .7rem;
+  border: 1px solid var(--attention);
+  border-radius: 999px;
+  color: var(--attention);
+  font-size: .8rem;
+}
+
+.couverture {
+  width: 100%;
+  margin: 1.2rem 0 1.6rem;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-grand);
+}
+
+.fil-ariane {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  font-size: .82rem;
+  color: var(--texte-faible);
+}
+.fil-ariane a { color: var(--texte-doux); text-decoration: none; }
+.fil-ariane a:hover { color: var(--accent); text-decoration: underline; }
+
+.preuve-meta {
+  font-size: .82rem;
+  color: var(--texte-faible);
+  font-family: var(--police-mono);
+}
+
+.preuve-bloc {
+  margin: 1rem 0 1.4rem;
+  padding: .9rem 1.1rem;
+  background: var(--fond-sur);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+.preuve-titre {
+  margin: 0 0 .3rem;
+  font-family: var(--police-mono);
+  font-size: .88rem;
+  color: var(--texte);
+}
+.preuve-verdict { margin: .3rem 0 .6rem; font-size: .9rem; color: var(--texte-doux); }
+.preuve-verdict.ok strong { color: var(--ok); }
+.preuve-verdict.ko strong, .ko { color: var(--danger); }
+pre .ko { color: var(--danger); }
+
+.galerie {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  margin: 1.2rem 0;
+}
+.galerie figure { margin: 0; }
+.galerie img {
+  width: 100%;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  display: block;
+}
+.galerie figcaption {
+  margin-top: .45rem;
+  font-size: .8rem;
+  color: var(--texte-faible);
+}
+
+.exemple {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 1.4rem 0;
+  padding: 1rem 1.1rem;
+  background: var(--fond-sur);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon-grand);
+}
+.exemple-etiquette {
+  margin: 0 0 .35rem;
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+}
+.exemple pre { margin: 0; }
+@media (min-width: 46rem) {
+  .exemple { grid-template-columns: 1fr 1fr; }
+}
+
+.widget {
+  margin: 1.6rem 0;
+  padding: 1.2rem 1.3rem;
+  background: var(--fond-sur);
+  border: 1px solid var(--bordure-forte);
+  border-radius: var(--rayon-grand);
+}
+.widget-titre {
+  margin: 0 0 .9rem;
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--texte-faible);
+}
+.widget-controle { display: grid; gap: .8rem; margin-bottom: 1rem; }
+.widget-controle label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: .85rem;
+  color: var(--texte-doux);
+}
+.widget-controle output { font-family: var(--police-mono); color: var(--texte); }
+.widget-resultat {
+  padding: .8rem 1rem;
+  border-radius: var(--rayon);
+  font-family: var(--police-mono);
+  font-size: .95rem;
+  background: var(--fond);
+  border: 1px solid var(--bordure);
+}
+.widget-resultat.ok { border-color: var(--ok); color: var(--ok); }
+.widget-resultat.ko { border-color: var(--danger); color: var(--danger); }
+
+.retour { margin-top: 2.2rem; font-size: .9rem; }
+
+.carte-projet { overflow: hidden; }
+.carte-projet .carte-image { display: block; margin: -.2rem 0 .2rem; }
+.carte-projet img {
+  width: 100%;
+  display: block;
+  border-radius: var(--rayon);
+  border: 1px solid var(--bordure);
+}
+.carte-projet h3 { margin-top: .3rem; }
+.carte-projet .etat { margin: .2rem 0 0; }
+.carte-projet .prix { margin-top: .5rem; font-weight: 700; color: var(--accent); }
+
+.widget-cuve { justify-content: flex-start !important; }
+.widget input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.widget input[type="checkbox"] { accent-color: var(--accent); }
+
+.liste-articles { margin: 1.6rem 0; }
+.article-ligne {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--bordure);
+}
+.article-ligne:last-child { border-bottom: 0; }
+.article-date {
+  margin: 0 0 .2rem;
+  font-size: .78rem;
+  font-family: var(--police-mono);
+  color: var(--texte-faible);
+}
+.article-ligne h2 { margin: 0 0 .3rem; font-size: 1.1rem; }
+.article-ligne h2 a { color: var(--texte); text-decoration: none; }
+.article-ligne h2 a:hover { color: var(--accent); text-decoration: underline; }
+.article-ligne p { margin: 0; font-size: .92rem; }
+
 /* ---------------------------------------------------------- impression */
 
 @media print {

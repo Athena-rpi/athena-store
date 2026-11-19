@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preuve — La serre — Athéna</title>
+<meta name="description" content="L&#39;état réel des bus et de la base, au moment de la construction."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Preuve — La serre">
+<meta property="og:description" content="L&#39;état réel des bus et de la base, au moment de la construction."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">Sur cette page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../../">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Agent résident d&#39;un Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>Sur cette page</span></label>
+
+    <nav class="nav" aria-label="Sur cette page">
+      <ul>
+        <li><a href="../../../">Documentation technique pour serres et microcontrôleurs</a></li>
+        <li><a href="../../../projets/index/">Projets</a></li>
+        <li><a href="../../../a-propos/">À propos</a></li>
+        <li><a href="../../../faq/">FAQ</a></li>
+        <li><a href="../../../legal/">Mentions légales</a></li>
+        <li><a href="../../../journal/index/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../../en/projets/serre/preuve/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page preuve-page">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane">
+    <a href="../../../projets/index/">Projets</a>
+    <span aria-hidden="true">/</span>
+<a href="../../../projets/serre/">La serre</a>
+    <span aria-hidden="true">/</span>    <span>La preuve</span>
+  </nav>
+
+  <header class="page-entete">
+    <h1>Preuve — La serre</h1>
+<p class="lede">L&#39;état réel des bus et de la base, au moment de la construction.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-18</p>
+  </header>
+
+  <div class="corps">
+  <h2 id="ce-qui-est-montré">Ce qui est montré</h2>
+<p>L&rsquo;état des bus activés dans <code>config.txt</code>, les nœuds I2C et SPI présents, et la
+liste des sondes 1-Wire reconnues. S&rsquo;il n&rsquo;y en a pas, la page le dit.</p>
+<h2 id="ce-qui-nrsquoest-pas-prouvé">Ce qui n&rsquo;est pas prouvé</h2>
+<p>C&rsquo;est le point important de ce projet : <strong>rien de physique n&rsquo;est encore
+branché</strong>. Les relevés affichés ailleurs sur ce site viennent d&rsquo;une base de
+démonstration, et c&rsquo;est écrit.</p>
+<h2 id="ce-qui-changera">Ce qui changera</h2>
+<p>Dès qu&rsquo;un capteur répond, cette page affichera le relevé réel, la date du
+premier relevé, et la continuité des mesures. Le manifeste de preuve est déjà
+écrit pour.</p>
+  </div>
+
+
+
+    <h2 id="compteurs">Compteurs</h2>
+    <table>
+      <tr><th>Compteurs</th><th>valeur</th></tr>
+      <tr><td>Mesures de démonstration en base</td><td><code>120</code></td></tr>
+    </table>
+
+    <h2 id="commandes">Commandes</h2>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Bus activés dans config.txt</p>
+      <pre><code>grep -E &#39;dtparam|dtoverlay&#39; /boot/firmware/config.txt
+dtparam=i2c_arm=on
+#dtparam=i2s=on
+dtparam=spi=on
+dtparam=audio=on
+dtoverlay=vc4-kms-v3d
+dtoverlay=w1-gpio
+dtoverlay=dwc2,dr_mode=host
+dtoverlay=nospi10</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Nœuds I2C et SPI</p>
+      <pre><code>ls /dev/i2c-* /dev/spidev* 2&gt;/dev/null
+/dev/i2c-1
+/dev/i2c-13
+/dev/i2c-14
+/dev/spidev0.0
+/dev/spidev0.1</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Sondes 1-Wire</p>
+      <pre><code>cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 2&gt;/dev/null || echo &#34;aucune sonde&#34;
+00-4c4000000000
+00-cc4000000000</code></pre>
+    </div>
+
+
+    <h2 id="captures">Images</h2>
+    <div class="galerie">
+      <figure>
+        <img src="../../../ressources/serre-24h.png" alt="Le tableau de bord que le kit produit (données de démonstration)">
+<figcaption>Le tableau de bord que le kit produit (données de démonstration)</figcaption>      </figure>
+    </div>
+
+    <h2 id="limites">Ce qui n&#39;est pas prouvé</h2>
+    <ul class="liste-limites">
+<li>Aucun capteur n&#39;est branché : les bus sont activés, mais vides.</li><li>La pompe et le débitmètre ne sont pas encore installés.</li>    </ul>
+
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
+    <p class="pied-meta">Adresses vérifiées le 2026-11-18 ·
+       <a href="../../../projets/index/">Projets</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>
