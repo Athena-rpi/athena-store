@@ -108,7 +108,7 @@ NOUVEAU PAIEMENT — USDC : transaction 0xdef
 BTC ignoré : RPC indisponible
 USDC ignoré : RPC indisponible
 ----------------------------------------------------------------------
-Ran 17 tests in 0.006s
+Ran 17 tests in 0.010s
 
 OK</code></pre>
     </div>
@@ -116,22 +116,22 @@ OK</code></pre>
     <h2 id="compteurs">Compteurs</h2>
     <table>
       <tr><th>Compteurs</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>1135</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>1166</code></td></tr>
     </table>
 
     <h2 id="commandes">Commandes</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-19T11:24:39-05:00
+Dernier échantillon : 2026-11-19T11:57:29-05:00
   température   43.3 °C   (24 h : min 38.4 / moy 41.4 / max 47.2)
   throttled    0x0
   tension cœur  0.8336 V
-  uptime        19.6 h   charge 0.27
-  mémoire dispo 14374.1 Mo   zram 0.0 Mo
-  disque        9.86 %   (24 h max 9.86 %)
-  unités en échec 0   wlan -63.0 dBm   ntp oui
-  échantillons 24 h : 1135   événements throttle : 0
+  uptime        20.2 h   charge 0.48
+  mémoire dispo 14135.0 Mo   zram 0.0 Mo
+  disque        9.87 %   (24 h max 9.87 %)
+  unités en échec 0   wlan -62.0 dBm   ntp oui
+  échantillons 24 h : 1166   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -139,12 +139,12 @@ Dernier échantillon : 2026-11-19T11:24:39-05:00
     <div class="preuve-bloc">
       <p class="preuve-titre">Timers Athéna</p>
       <pre><code>systemctl list-timers &#39;athena-*&#39; --no-pager
-NEXT                            LEFT LAST                           PASSED UNIT                          ACTIVATES
-Thu 2026-11-19 11:25:39 EST       6s Thu 2026-11-19 11:24:39 EST   53s ago athena-health.timer           athena-health.service
-Thu 2026-11-19 12:45:47 EST 1h 20min Thu 2026-11-19 10:45:47 EST 39min ago athena-git-sync.timer         athena-git-sync.service
-Fri 2026-11-20 03:17:00 EST      15h Thu 2026-11-19 03:17:24 EST    8h ago athena-vault-backup.timer     athena-vault-backup.service
-Fri 2026-11-20 04:47:00 EST      17h Thu 2026-11-19 04:47:17 EST    6h ago athena-site-maintenance.timer athena-site-maintenance.service
-Sun 2026-11-22 04:17:00 EST   2 days Wed 2026-11-18 15:28:57 EST         - athena-vault-doctor.timer     athena-vault-doctor.service
+NEXT                          LEFT LAST                              PASSED UNIT                          ACTIVATES
+Thu 2026-11-19 11:58:29 EST    46s Thu 2026-11-19 11:57:29 EST      13s ago athena-health.timer           athena-health.service
+Thu 2026-11-19 12:45:47 EST  48min Thu 2026-11-19 10:45:47 EST 1h 11min ago athena-git-sync.timer         athena-git-sync.service
+Fri 2026-11-20 03:17:00 EST    15h Thu 2026-11-19 03:17:24 EST       8h ago athena-vault-backup.timer     athena-vault-backup.service
+Fri 2026-11-20 04:47:00 EST    16h Thu 2026-11-19 04:47:17 EST       7h ago athena-site-maintenance.timer athena-site-maintenance.service
+Sun 2026-11-22 04:17:00 EST 2 days Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
 
 5 timers listed.
 Pass --all to see loaded but inactive timers, too.</code></pre>
