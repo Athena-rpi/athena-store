@@ -214,6 +214,7 @@ pre code { background: none; border: 0; padding: 0; font-size: inherit; }
 
 .adresse, .bloc {
   display: block;
+  position: relative;
   font-family: var(--police-mono);
   font-size: .9rem;
   background: var(--fond-sur);
@@ -543,6 +544,22 @@ pre .ko { color: var(--danger); }
   accent-color: var(--accent);
 }
 .widget input[type="checkbox"] { accent-color: var(--accent); }
+
+.copier {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  padding: .25rem .7rem;
+  font: inherit;
+  font-size: .72rem;
+  color: var(--texte-doux);
+  background: var(--fond-sur-2);
+  border: 1px solid var(--bordure-forte);
+  border-radius: var(--rayon);
+  cursor: pointer;
+}
+.copier:hover { color: var(--texte); border-color: var(--accent); }
+.copier.fait { color: var(--ok); border-color: var(--ok); }
 
 .liste-articles { margin: 1.6rem 0; }
 .article-ligne {

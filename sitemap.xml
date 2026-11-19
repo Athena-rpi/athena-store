@@ -7,6 +7,12 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
   </url>
   <url>
+    <loc>https://athena-rpi.github.io/athena-store/en/demarrer/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
+  </url>
+  <url>
     <loc>https://athena-rpi.github.io/athena-store/en/faq/</loc>
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/faq/"/>
@@ -113,6 +119,12 @@
     <lastmod>2026-11-19</lastmod>
     <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
+  </url>
+  <url>
+    <loc>https://athena-rpi.github.io/athena-store/demarrer/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
   </url>
   <url>
     <loc>https://athena-rpi.github.io/athena-store/faq/</loc>

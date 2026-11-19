@@ -34,6 +34,7 @@
       <ul>
         <li><a href="../../../../en/">Home</a></li>
         <li><a href="../../../../en/projets/">Projects</a></li>
+        <li><a href="../../../../en/demarrer/">Where to start</a></li>
         <li><a href="../../../../en/a-propos/">About</a></li>
         <li><a href="../../../../en/faq/">FAQ</a></li>
         <li><a href="../../../../en/legal/">Legal</a></li>
@@ -89,7 +90,7 @@ NOUVEAU PAIEMENT — USDC : transaction 0xdef
 BTC ignoré : RPC indisponible
 USDC ignoré : RPC indisponible
 ----------------------------------------------------------------------
-Ran 17 tests in 0.009s
+Ran 17 tests in 0.017s
 
 OK</code></pre>
     </div>
@@ -107,7 +108,7 @@ NOUVEAU PAIEMENT — USDC : transaction 0xdef
 BTC ignoré : RPC indisponible
 USDC ignoré : RPC indisponible
 ----------------------------------------------------------------------
-Ran 17 tests in 0.010s
+Ran 17 tests in 0.009s
 
 OK</code></pre>
     </div>
@@ -115,22 +116,22 @@ OK</code></pre>
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>844</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>846</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-19T06:17:19-05:00
-  température   42.2 °C   (24 h : min 38.4 / moy 41.47 / max 47.2)
+Dernier échantillon : 2026-11-19T06:19:27-05:00
+  température   43.9 °C   (24 h : min 38.4 / moy 41.48 / max 47.2)
   throttled    0x0
   tension cœur  0.8336 V
-  uptime        14.5 h   charge 0.24
-  mémoire dispo 14760.5 Mo   zram 0.0 Mo
+  uptime        14.6 h   charge 0.2
+  mémoire dispo 14245.0 Mo   zram 0.0 Mo
   disque        9.85 %   (24 h max 9.85 %)
-  unités en échec 0   wlan -62.0 dBm   ntp oui
-  échantillons 24 h : 844   événements throttle : 0
+  unités en échec 0   wlan -61.0 dBm   ntp oui
+  échantillons 24 h : 846   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -139,10 +140,10 @@ Dernier échantillon : 2026-11-19T06:17:19-05:00
       <p class="preuve-titre">Timers Athéna</p>
       <pre><code>systemctl list-timers &#39;athena-*&#39; --no-pager
 NEXT                          LEFT LAST                              PASSED UNIT                          ACTIVATES
-Thu 2026-11-19 06:18:19 EST    49s Thu 2026-11-19 06:17:19 EST      10s ago athena-health.timer           athena-health.service
-Thu 2026-11-19 06:45:02 EST  27min Thu 2026-11-19 04:45:02 EST 1h 32min ago athena-git-sync.timer         athena-git-sync.service
-Fri 2026-11-20 03:17:00 EST    20h Thu 2026-11-19 03:17:24 EST  3h 0min ago athena-vault-backup.timer     athena-vault-backup.service
-Fri 2026-11-20 04:47:00 EST    22h Thu 2026-11-19 04:47:17 EST 1h 30min ago athena-site-maintenance.timer athena-site-maintenance.service
+Thu 2026-11-19 06:20:27 EST    30s Thu 2026-11-19 06:19:27 EST      29s ago athena-health.timer           athena-health.service
+Thu 2026-11-19 06:45:02 EST  25min Thu 2026-11-19 04:45:02 EST 1h 34min ago athena-git-sync.timer         athena-git-sync.service
+Fri 2026-11-20 03:17:00 EST    20h Thu 2026-11-19 03:17:24 EST  3h 2min ago athena-vault-backup.timer     athena-vault-backup.service
+Fri 2026-11-20 04:47:00 EST    22h Thu 2026-11-19 04:47:17 EST 1h 32min ago athena-site-maintenance.timer athena-site-maintenance.service
 Sun 2026-11-22 04:17:00 EST 2 days Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
 
 5 timers listed.
@@ -179,5 +180,6 @@ ffe4dfdaac3e7296b6f9ee71a520630bc70b1d04	HEAD</code></pre>
 </footer>
 
 <script src="../../../../assets/site.js" defer></script>
+<script src="../../../../assets/widgets/adresse.js" defer></script>
 </body>
 </html>
