@@ -59,7 +59,7 @@
 
   <header class="page-entete">
     <h1>Proof — The greenhouse</h1>
-<p class="lede">The real state of the buses and the database when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-19</p>
+<p class="lede">The real state of the buses and the database when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-20</p>
   </header>
 
   <div class="corps">
@@ -100,17 +100,14 @@ dtoverlay=nospi10</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Nœuds I2C et SPI</p>
       <pre><code>ls /dev/i2c-* /dev/spidev* 2&gt;/dev/null
-/dev/i2c-1
-/dev/i2c-13
-/dev/i2c-14
 /dev/spidev0.0
 /dev/spidev0.1</code></pre>
-    </div>
+<p class="preuve-verdict ko">code de retour 2</p>    </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">Sondes 1-Wire</p>
       <pre><code>cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 2&gt;/dev/null || echo &#34;aucune sonde&#34;
-00-b7a000000000
-00-77a000000000</code></pre>
+00-30e000000000
+00-b0e000000000</code></pre>
     </div>
 
 
@@ -131,7 +128,7 @@ dtoverlay=nospi10</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-19 ·
+    <p class="pied-meta">Addresses checked on 2026-11-20 ·
        <a href="../../../../en/projets/">Projects</a>
     </p>
   </div>

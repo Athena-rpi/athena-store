@@ -59,7 +59,7 @@
 
   <header class="page-entete">
     <h1>Proof — Home services</h1>
-<p class="lede">The real services running on the Pi, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-19</p>
+<p class="lede">The real services running on the Pi, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-20</p>
   </header>
 
   <div class="corps">
@@ -79,27 +79,16 @@ distribution, service names and paths change.</p>
     <h2 id="tests">Tests</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_sante.py</p>
-      <p class="preuve-verdict ok">
-        <strong>12</strong> tests — OK      </p>
+      <p class="preuve-verdict ko">
+        <strong>12</strong> tests — timeout après 60 s      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-aucun nouveau paiement
-NOUVEAU PAIEMENT — BTC : 3 transaction(s) au total, 0.00150000 BTC reçus au total
-aucun nouveau paiement
-aucun nouveau paiement
-NOUVEAU PAIEMENT — USDC : transaction 0xabc
-NOUVEAU PAIEMENT — USDC : transaction 0xdef
-BTC ignoré : RPC indisponible
-USDC ignoré : RPC indisponible
-----------------------------------------------------------------------
-Ran 17 tests in 0.009s
-
-OK</code></pre>
+</code></pre>
     </div>
 
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>1166</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>2737</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
@@ -114,15 +103,15 @@ active</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-19T11:57:29-05:00
-  température   43.3 °C   (24 h : min 38.4 / moy 41.4 / max 47.2)
+Dernier échantillon : 2026-11-20T15:35:43-05:00
+  température   45.0 °C   (24 h : min 38.4 / moy 41.2 / max 46.6)
   throttled    0x0
-  tension cœur  0.8336 V
-  uptime        20.2 h   charge 0.48
-  mémoire dispo 14135.0 Mo   zram 0.0 Mo
-  disque        9.87 %   (24 h max 9.87 %)
-  unités en échec 0   wlan -62.0 dBm   ntp oui
-  échantillons 24 h : 1166   événements throttle : 0
+  tension cœur  0.75 V
+  uptime        24.0 h   charge 0.38
+  mémoire dispo 14254.8 Mo   zram 0.0 Mo
+  disque        9.96 %   (24 h max 9.96 %)
+  unités en échec 0   wlan -63.0 dBm   ntp oui
+  échantillons 24 h : 1366   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -130,7 +119,7 @@ Dernier échantillon : 2026-11-19T11:57:29-05:00
     <div class="preuve-bloc">
       <p class="preuve-titre">Sauvegardes du vault conservées</p>
       <pre><code>find backups -name &#39;vault-*.bundle&#39; | wc -l
-30</code></pre>
+76</code></pre>
     </div>
 
     <h2 id="fichiers">Files</h2>
@@ -159,7 +148,7 @@ Dernier échantillon : 2026-11-19T11:57:29-05:00
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-19 ·
+    <p class="pied-meta">Addresses checked on 2026-11-20 ·
        <a href="../../../../en/projets/">Projects</a>
     </p>
   </div>

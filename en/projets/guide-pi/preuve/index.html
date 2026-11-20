@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proof — Pi guide — Athéna</title>
+<meta name="description" content="One real command per chapter, replayed when this page is built."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/preuve/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Proof — Pi guide">
+<meta property="og:description" content="One real command per chapter, replayed when this page is built."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">On this page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../../../en/">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Resident agent on a Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>On this page</span></label>
+
+    <nav class="nav" aria-label="On this page">
+      <ul>
+        <li><a href="../../../../en/">Home</a></li>
+        <li><a href="../../../../en/projets/">Projects</a></li>
+        <li><a href="../../../../en/demarrer/">Where to start</a></li>
+        <li><a href="../../../../en/a-propos/">About</a></li>
+        <li><a href="../../../../en/faq/">FAQ</a></li>
+        <li><a href="../../../../en/legal/">Legal</a></li>
+        <li><a href="../../../../en/journal/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../../../projets/guide-pi/preuve/" hreflang="fr" lang="fr">Français</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page preuve-page">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane">
+    <a href="../../../../en/projets/">Projects</a>
+    <span aria-hidden="true">/</span>
+<a href="../../../../en/projets/guide-pi/">Reliable self-hosting on Raspberry Pi</a>
+    <span aria-hidden="true">/</span>    <span>The proof</span>
+  </nav>
+
+  <header class="page-entete">
+    <h1>Proof — Pi guide</h1>
+<p class="lede">One real command per chapter, replayed when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-20</p>
+  </header>
+
+  <div class="corps">
+  <h2 id="what-is-executed">What is executed</h2>
+<p>The manifest <code>store/projets/guide-pi/preuve.yml</code> replays <strong>one command per
+chapter</strong> (14 chapters), plus the guide&rsquo;s two verifiers. Everything runs in
+<code>~/Documents/Athena</code> when this page is built, with a 60 s timeout per command. A
+command that fails shows its return code and its output — never an invented
+result.</p>
+<p>Chapters covered: temperature and throttling (1), timers (2), <code>User=</code> and failed
+units (3), health probe (4), <code>curl</code> on loopback (5), <code>git bundle verify</code> (6),
+restore with clone + <code>fsck</code> + checksum (7), doctor (8), commits and no versioned
+secrets (9), payment watching (10), dated report of the daily validation (11),
+backlog (12), occupied ports (13), final checklist control (14).</p>
+<h2 id="what-is-counted">What is counted</h2>
+<p>Three test suites (<code>test_sante.py</code>, <code>test_salle_controle.py</code>,
+<code>test_surveillance.py</code>), the number of health samples and alerts in the database,
+and the fingerprints of the delivered files (guide, PDF, scripts, free excerpt).
+If the backup stops passing, the doctor says so and the page shows it.</p>
+<h2 id="what-is-not-replayed">What is not replayed</h2>
+<ul>
+<li>chapter 11 is proven by the <strong>dated report</strong> of <code>validation_quotidienne.py</code>,
+  not by a fresh run: that script probes the model catalogue with credentials,
+  which have no place in a public page;</li>
+<li>the byte-for-byte comparison of chapter 7 assumes the vault is at the same
+  commit as the bundle; the manifest replays clone + <code>fsck</code> + checksum, not that
+  comparison;</li>
+<li><code>wallet/verify-usdc.js</code> was not run: there is no transaction to verify on this
+  machine.</li>
+</ul>
+<h2 id="the-limits">The limits</h2>
+<p>At the bottom of the page, nine entries. They repeat the seven limits declared in
+the guide&rsquo;s appendix, plus the two replay limits above. A guide that hides its
+gaps is not worth its price.</p>
+  </div>
+
+
+    <h2 id="tests">Tests</h2>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_sante.py</p>
+      <p class="preuve-verdict ko">
+        <strong>12</strong> tests — timeout après 60 s      </p>
+      <pre><code>python3 -m unittest discover -s tests -q
+</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_salle_controle.py</p>
+      <p class="preuve-verdict ok">
+        <strong>11</strong> tests — OK      </p>
+      <pre><code>python3 -m unittest tests.test_salle_controle -q
+----------------------------------------------------------------------
+Ran 11 tests in 0.027s
+
+OK</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_surveillance.py</p>
+      <p class="preuve-verdict ko">
+        <strong>5</strong> tests — timeout après 60 s      </p>
+      <pre><code>python3 -m unittest tests.test_surveillance -q
+</code></pre>
+    </div>
+
+    <h2 id="compteurs">Counters</h2>
+    <table>
+      <tr><th>Counters</th><th>valeur</th></tr>
+      <tr><td>Relevés de santé en base</td><td><code>2736</code></td></tr>
+      <tr><td>Alertes enregistrées</td><td><code>2</code></td></tr>
+    </table>
+
+    <h2 id="commandes">Commands</h2>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 1 — température et bridage, relus sur le Pi</p>
+      <pre><code>vcgencmd measure_temp &amp;&amp; vcgencmd get_throttled
+temp=44.4&#39;C
+throttled=0x0</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 2 — les timers Athéna, avec leur prochaine échéance</p>
+      <pre><code>systemctl list-timers &#39;athena-*&#39; --all --no-pager
+NEXT                             LEFT LAST                              PASSED UNIT                          ACTIVATES
+Fri 2026-11-20 15:34:39 EST        4s Fri 2026-11-20 15:33:39 EST      55s ago athena-health.timer           athena-health.service
+Fri 2026-11-20 15:46:28 EST     11min Fri 2026-11-20 13:46:28 EST 1h 48min ago athena-git-sync.timer         athena-git-sync.service
+Sat 2026-11-21 03:17:00 EST       11h Fri 2026-11-20 03:17:08 EST      12h ago athena-vault-backup.timer     athena-vault-backup.service
+Sat 2026-11-21 04:47:00 EST       13h Fri 2026-11-20 04:47:11 EST      10h ago athena-site-maintenance.timer athena-site-maintenance.service
+Sun 2026-11-22 04:17:00 EST 1 day 12h Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
+
+5 timers listed.</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 3 — User= explicite, et aucune unité en échec</p>
+      <pre><code>systemctl show -p User --value athena-health.service &amp;&amp; systemctl --failed --no-pager
+athena
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 4 — la sonde de santé relue (24 h)</p>
+      <pre><code>python3 sys/health_status.py
+Dernier échantillon : 2026-11-20T15:33:39-05:00
+  température   44.4 °C   (24 h : min 38.4 / moy 41.19 / max 46.6)
+  throttled    0x0
+  tension cœur  0.8325 V
+  uptime        24.0 h   charge 0.2
+  mémoire dispo 14209.0 Mo   zram 0.0 Mo
+  disque        9.96 %   (24 h max 9.96 %)
+  unités en échec 0   wlan -63.0 dBm   ntp oui
+  échantillons 24 h : 1365   événements throttle : 0
+  alertes récentes :
+    2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
+    2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 5 — la page de statut répond sur la boucle locale</p>
+      <pre><code>curl -s 127.0.0.1:8081/api/health
+{&#34;last&#34;: {&#34;id&#34;: 2735, &#34;ts&#34;: &#34;2026-11-20T15:33:39-05:00&#34;, &#34;epoch&#34;: 1795206819, &#34;temp_c&#34;: 44.4, &#34;throttled&#34;: 0, &#34;volt_core&#34;: 0.8325, &#34;uptime_s&#34;: 86358.0, &#34;load1&#34;: 0.2, &#34;mem_avail_mb&#34;: 14209.0, &#34;disk_used_pct&#34;: 9.96, &#34;zram_used_mb&#34;: 0.0, &#34;failed_units&#34;: 0, &#34;wlan_dbm&#34;: -63.0, &#34;ntp_synced&#34;: 1}, &#34;stats_24h&#34;: {&#34;samples&#34;: 1365, &#34;temp_min&#34;: 38.4, &#34;temp_max&#34;: 46.6, &#34;temp_avg&#34;: 41.19, &#34;disk_max&#34;: 9.96, &#34;wlan_min&#34;: -65.0, &#34;throttle_events&#34;: 0, &#34;ntp_misses&#34;: 0}, &#34;alerts&#34;: [{&#34;ts&#34;: &#34;2026-11-18T21:36:05-05:00&#34;, &#34;kind&#34;: &#34;failed_units&#34;, &#34;detail&#34;: &#34;1 unit\u00e9(s) en \u00e9chec&#34;}, {&#34;ts&#34;: &#34;2026-11-18T15:46:54-05:00&#34;, &#34;kind&#34;: &#34;ntp_unsynced&#34;, &#34;detail&#34;: &#34;NTP non synchronis\u00e9&#34;}], &#34;db&#34;: &#34;/home/athena/Documents/Athena/data/health.db&#34;}</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 6 — le bundle du vault est vérifié, pas supposé</p>
+      <pre><code>git bundle verify state/vault.bundle &amp;&amp; tail -n 3 logs/vault_backup.log
+The bundle contains these 2 refs:
+bca21f071f5400d80ecf7bada8d874480372b195 refs/heads/main
+bca21f071f5400d80ecf7bada8d874480372b195 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
+[2026-11-20T15:16:04-05:00] bundle copié dans state/vault.bundle
+[2026-11-20T15:16:04-05:00] sommes de contrôle : 8 fichiers vault
+[2026-11-20T15:16:04-05:00] bundles conservés : 75
+state/vault.bundle is okay</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 7 — restauration réelle : clone du bundle, fsck, empreinte</p>
+      <pre><code>d=$(mktemp -d) &amp;&amp; git clone -q state/vault.bundle &#34;$d/restau&#34; &amp;&amp; git -C &#34;$d/restau&#34; fsck --full &amp;&amp; sha256sum &#34;$d/restau/00_Journal/2026-11.md&#34; &amp;&amp; git -C &#34;$d/restau&#34; log -1 --format=&#39;%h %ad %s&#39; --date=short &amp;&amp; rm -rf &#34;$d&#34;
+24d09f8fb8f0499a4ed24f09d50246d594382710cf031421e27f1b895dab6d46  /home/athena/.hermes/profiles/athena/cache/scratch/tmp.xSaXiIXy1R/restau/00_Journal/2026-11.md
+bca21f0 2026-11-20 auto: sauvegarde quotidienne 2026-11-20
+hint: Using &#39;master&#39; as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch &lt;name&gt;
+hint:
+hint: Names commonly chosen instead of &#39;master&#39; are &#39;main&#39;, &#39;trunk&#39; and
+hint: &#39;development&#39;. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m &lt;name&gt;</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 8 — le doctor : intégrité du vault et des sauvegardes</p>
+      <pre><code>bash sys/vault_doctor.sh
+     tension cœur  0.8325 V
+     uptime        24.0 h   charge 0.2
+     mémoire dispo 14209.0 Mo   zram 0.0 Mo
+     disque        9.96 %   (24 h max 9.96 %)
+     unités en échec 0   wlan -63.0 dBm   ntp oui
+     échantillons 24 h : 1365   événements throttle : 0
+     alertes récentes :
+       2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
+       2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé
+
+BILAN : DES PROBLÈMES SONT SIGNALÉS
+sha256sum: WARNING: 1 computed checksum did NOT match</code></pre>
+<p class="preuve-verdict ko">code de retour 1</p>    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 9 — derniers commits, et aucun secret versionné</p>
+      <pre><code>git log --oneline -3 &amp;&amp; (git ls-files | grep -E &#39;secrets/|\.env|\.seed&#39; || echo &#39;aucun secret versionné&#39;)
+7dcaf1c sauvegarde auto 2026-11-20 15:17
+c0a8b21 sauvegarde auto 2026-11-20 15:16
+c4a827a sauvegarde auto 2026-11-20 14:36
+aucun secret versionné</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 10 — surveillance des paiements : passage réel, état relu</p>
+      <pre><code>python3 sys/surveiller_paiements.py &amp;&amp; cat data/paiements_etat.json
+{
+  &#34;btc_tx&#34;: 0,
+  &#34;btc_recu&#34;: 0,
+  &#34;usdc_txids_base&#34;: [],
+  &#34;bloc_base&#34;: 60082502,
+  &#34;solde_base&#34;: 0.0,
+  &#34;usdc_txids_eth&#34;: [
+    &#34;0x6d8c16b40c0c8cf08bff846e712c3a5ad9090fa539b01bf2cfa8bedbba78065f&#34;
+  ],
+  &#34;bloc_eth&#34;: 26458725,
+  &#34;solde_eth&#34;: 17.28
+}</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 11 — validation quotidienne : le rapport daté qu&#39;elle écrit</p>
+      <pre><code>cat data/validation_quotidienne.txt
+  [OK] bundles datés — 57 bundles ; plus récent âgé de 1.0 h
+  [OK] couche : commit — dernier commit il y a 1.0 h (Fri Nov 20 06:19:23 2026 -0500)
+  [OK] couche : poussée — [2026-11-20T06:19:25-05:00] poussé 087f7bb
+  [OK] vault : rien d&#39;en attente — propre
+  [OK] étude de marché : rapport à jour — rapport âgé de 1.0 h
+
+MODÈLE
+  [OK] catalogue de modèles — 413 modèles
+  [OK] modèle par défaut — meituan/longcat-2.5:free — 1,048,576 ctx, gratuit=True ; répond
+  [OK] fallback qwen/qwen4-max:free — 1,000,000 ctx
+
+Tout est en ordre.</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 12 — le backlog, source de vérité</p>
+      <pre><code>python3 sys/backlog.py etat
+backlog : 127 tâches — {&#39;fait&#39;: 13, &#39;bloqué&#39;: 3, &#39;prêt&#39;: 111}
+reste : 3330 min (55.5 h)
+prochaine : T05 — Rédaction : valider un brouillon</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 13 — les ports occupés, relus avant de choisir le sien</p>
+      <pre><code>ss -ltnp | grep -E &#39;:8080|:8081&#39;
+LISTEN 0      5               127.0.0.1:8081       0.0.0.0:*    users:((&#34;python3&#34;,pid=62913,fd=3))   
+LISTEN 0      50     [::ffff:127.0.0.1]:8080             *:*    users:((&#34;signal-cli&#34;,pid=1157,fd=16))</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Ch. 14 — contrôle final de la checklist, en une ligne</p>
+      <pre><code>systemctl --failed --no-pager &amp;&amp; git bundle verify state/vault.bundle &amp;&amp; curl -s -o /dev/null -w &#39;%{http_code}\n&#39; 127.0.0.1:8081/
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+The bundle contains these 2 refs:
+bca21f071f5400d80ecf7bada8d874480372b195 refs/heads/main
+bca21f071f5400d80ecf7bada8d874480372b195 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
+200
+state/vault.bundle is okay</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Annexe — le guide vérifié contre ses fichiers sources</p>
+      <pre><code>python3 store/projets/guide-pi/verifier_guide.py
+blocs — copies littérales : 41, extraits partiels : 0, commandes composées : 31, sorties/données : 38
+
+PROBLÈMES :
+  - bloc étiqueté non retrouvé dans les sources : ligne 1107 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1118 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1140 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1147 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1167 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1181 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1382 (json)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1460 (python)
+  - bloc étiqueté non retrouvé dans les sources : ligne 1817 (python)</code></pre>
+<p class="preuve-verdict ko">code de retour 1</p>    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Annexe — le PDF vérifié contre le Markdown (119 blocs de code)</p>
+      <pre><code>python3 store/projets/guide-pi/verifier_pdf.py
+pages (pieds de page) : 36, total annoncé : [&#39;36&#39;]
+chapitres retrouvés dans le PDF : 14/14
+parties : 4, annexes : 3
+blocs de code : 119/119 retrouvés intégralement dans le PDF
+
+BILAN : OK — PDF conforme au Markdown (chapitres, parties, annexes, blocs de code)</code></pre>
+    </div>
+
+    <h2 id="fichiers">Files</h2>
+    <table>
+      <tr><th>fichier</th><th>size</th><th>checksum</th></tr>
+      <tr>
+        <td><code>store/projets/guide-pi/guide.md</code></td>
+        <td>72.7 Ko</td>
+        <td><code>ac7c9f0121d4</code></td>
+      </tr>
+      <tr>
+        <td><code>store/projets/guide-pi/guide.pdf</code></td>
+        <td>138.3 Ko</td>
+        <td><code>dc98b0b84231</code></td>
+      </tr>
+      <tr>
+        <td><code>store/projets/guide-pi/build_pdf.py</code></td>
+        <td>9.1 Ko</td>
+        <td><code>dcfb2b40b2fe</code></td>
+      </tr>
+      <tr>
+        <td><code>store/projets/guide-pi/verifier_guide.py</code></td>
+        <td>7.9 Ko</td>
+        <td><code>235265d289de</code></td>
+      </tr>
+      <tr>
+        <td><code>store/projets/guide-pi/verifier_pdf.py</code></td>
+        <td>4.9 Ko</td>
+        <td><code>bd54ae979389</code></td>
+      </tr>
+      <tr>
+        <td><code>ressources/guide-pi-guide.pdf</code></td>
+        <td>138.3 Ko</td>
+        <td><code>dc98b0b84231</code></td>
+      </tr>
+      <tr>
+        <td><code>ressources/echantillon-guide-pi.pdf</code></td>
+        <td>42.5 Ko</td>
+        <td><code>ea00efcd7244</code></td>
+      </tr>
+    </table>
+
+    <h2 id="captures">Images</h2>
+    <div class="galerie">
+      <figure>
+        <img src="../../../../ressources/extrait-guide-pi-page-1.png" alt="Page 1 — titre et sommaire">
+<figcaption>Page 1 — titre et sommaire</figcaption>      </figure>
+      <figure>
+        <img src="../../../../ressources/extrait-guide-pi-page-2.png" alt="Page 2 — chapitre 1, les six grandeurs et leurs seuils">
+<figcaption>Page 2 — chapitre 1, les six grandeurs et leurs seuils</figcaption>      </figure>
+      <figure>
+        <img src="../../../../ressources/extrait-guide-pi-page-3.png" alt="Page 3 — chapitre 2, les unités systemd">
+<figcaption>Page 3 — chapitre 2, les unités systemd</figcaption>      </figure>
+    </div>
+
+    <h2 id="limites">What is not proven</h2>
+    <ul class="liste-limites">
+<li>tests/test_sauvegarde.py n&#39;existe pas : la restauration du chapitre 7 est exécutée à la main (et rejouée par le manifeste ci-dessus), pas par un test automatisé.</li><li>sys/sauvegarde_chiffree.py n&#39;existe pas : le bundle décrit est NON chiffré. Quiconque obtient le fichier le lit.</li><li>Le dépôt distant est chez un tiers : « privé » n&#39;est pas « chiffré ».</li><li>wallet/verify-usdc.js n&#39;a pas été exécuté : aucune transaction à vérifier sur cette machine. Le code est cité tel qu&#39;il existe.</li><li>Le service web de la machine d&#39;origine sert un code antérieur au fichier sur disque (chapitre 5) : les six endpoints ont été vérifiés sur une instance éphémère du même fichier. Le redémarrage reste une action manuelle.</li><li>athena-site-maintenance.* n&#39;est pas copié dans state/units/ : une reconstruction à partir de ce seul dossier manque cette unité.</li><li>Les chiffres datés du guide sont des instantanés ; ceux de cette page sont recalculés à la construction.</li><li>Le chapitre 11 est prouvé par le rapport daté de validation_quotidienne.py, pas par une nouvelle exécution : le script sonde le catalogue de modèles avec des identifiants, qui n&#39;ont rien à faire dans une page publique.</li><li>La comparaison octet à octet du chapitre 7 suppose le vault au même commit que le bundle ; le manifeste rejoue clone + fsck + empreinte, pas cette comparaison.</li>    </ul>
+
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
+    <p class="pied-meta">Addresses checked on 2026-11-20 ·
+       <a href="../../../../en/projets/">Projects</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../../../assets/site.js" defer></script>
+<script src="../../../../assets/widgets/adresse.js" defer></script>
+</body>
+</html>

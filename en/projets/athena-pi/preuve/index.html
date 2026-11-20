@@ -59,7 +59,7 @@
 
   <header class="page-entete">
     <h1>Proof — Athéna Pi</h1>
-<p class="lede">The real state of the Pi and its services, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-19</p>
+<p class="lede">The real state of the Pi and its services, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-20</p>
   </header>
 
   <div class="corps">
@@ -78,60 +78,38 @@ nothing shown here is reachable from outside.</p>
     <h2 id="tests">Tests</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_sante.py</p>
-      <p class="preuve-verdict ok">
-        <strong>12</strong> tests — OK      </p>
+      <p class="preuve-verdict ko">
+        <strong>12</strong> tests — timeout après 60 s      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-aucun nouveau paiement
-NOUVEAU PAIEMENT — BTC : 3 transaction(s) au total, 0.00150000 BTC reçus au total
-aucun nouveau paiement
-aucun nouveau paiement
-NOUVEAU PAIEMENT — USDC : transaction 0xabc
-NOUVEAU PAIEMENT — USDC : transaction 0xdef
-BTC ignoré : RPC indisponible
-USDC ignoré : RPC indisponible
-----------------------------------------------------------------------
-Ran 17 tests in 0.009s
-
-OK</code></pre>
+</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_surveillance.py</p>
-      <p class="preuve-verdict ok">
-        <strong>5</strong> tests — OK      </p>
+      <p class="preuve-verdict ko">
+        <strong>5</strong> tests — timeout après 60 s      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-aucun nouveau paiement
-NOUVEAU PAIEMENT — BTC : 3 transaction(s) au total, 0.00150000 BTC reçus au total
-aucun nouveau paiement
-aucun nouveau paiement
-NOUVEAU PAIEMENT — USDC : transaction 0xabc
-NOUVEAU PAIEMENT — USDC : transaction 0xdef
-BTC ignoré : RPC indisponible
-USDC ignoré : RPC indisponible
-----------------------------------------------------------------------
-Ran 17 tests in 0.010s
-
-OK</code></pre>
+</code></pre>
     </div>
 
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>1166</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>2733</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-19T11:57:29-05:00
-  température   43.3 °C   (24 h : min 38.4 / moy 41.4 / max 47.2)
+Dernier échantillon : 2026-11-20T15:31:34-05:00
+  température   44.4 °C   (24 h : min 38.4 / moy 41.19 / max 46.6)
   throttled    0x0
-  tension cœur  0.8336 V
-  uptime        20.2 h   charge 0.48
-  mémoire dispo 14135.0 Mo   zram 0.0 Mo
-  disque        9.87 %   (24 h max 9.87 %)
-  unités en échec 0   wlan -62.0 dBm   ntp oui
-  échantillons 24 h : 1166   événements throttle : 0
+  tension cœur  0.8325 V
+  uptime        24.0 h   charge 1.05
+  mémoire dispo 13942.4 Mo   zram 0.0 Mo
+  disque        9.95 %   (24 h max 9.95 %)
+  unités en échec 0   wlan -63.0 dBm   ntp oui
+  échantillons 24 h : 1364   événements throttle : 0
   alertes récentes :
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
@@ -139,12 +117,12 @@ Dernier échantillon : 2026-11-19T11:57:29-05:00
     <div class="preuve-bloc">
       <p class="preuve-titre">Timers Athéna</p>
       <pre><code>systemctl list-timers &#39;athena-*&#39; --no-pager
-NEXT                          LEFT LAST                              PASSED UNIT                          ACTIVATES
-Thu 2026-11-19 11:58:29 EST    46s Thu 2026-11-19 11:57:29 EST      13s ago athena-health.timer           athena-health.service
-Thu 2026-11-19 12:45:47 EST  48min Thu 2026-11-19 10:45:47 EST 1h 11min ago athena-git-sync.timer         athena-git-sync.service
-Fri 2026-11-20 03:17:00 EST    15h Thu 2026-11-19 03:17:24 EST       8h ago athena-vault-backup.timer     athena-vault-backup.service
-Fri 2026-11-20 04:47:00 EST    16h Thu 2026-11-19 04:47:17 EST       7h ago athena-site-maintenance.timer athena-site-maintenance.service
-Sun 2026-11-22 04:17:00 EST 2 days Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
+NEXT                             LEFT LAST                              PASSED UNIT                          ACTIVATES
+Fri 2026-11-20 15:32:34 EST      85ms Fri 2026-11-20 15:31:34 EST      59s ago athena-health.timer           athena-health.service
+Fri 2026-11-20 15:46:28 EST     13min Fri 2026-11-20 13:46:28 EST 1h 46min ago athena-git-sync.timer         athena-git-sync.service
+Sat 2026-11-21 03:17:00 EST       11h Fri 2026-11-20 03:17:08 EST      12h ago athena-vault-backup.timer     athena-vault-backup.service
+Sat 2026-11-21 04:47:00 EST       13h Fri 2026-11-20 04:47:11 EST      10h ago athena-site-maintenance.timer athena-site-maintenance.service
+Sun 2026-11-22 04:17:00 EST 1 day 12h Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
 
 5 timers listed.
 Pass --all to see loaded but inactive timers, too.</code></pre>
@@ -173,7 +151,7 @@ ffe4dfdaac3e7296b6f9ee71a520630bc70b1d04	HEAD</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-19 ·
+    <p class="pied-meta">Addresses checked on 2026-11-20 ·
        <a href="../../../../en/projets/">Projects</a>
     </p>
   </div>
