@@ -1,289 +1,527 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
+    <loc>https://athena-project.dev/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/a-propos/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
+    <loc>https://athena-project.dev/a-propos/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/a-propos/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/demarrer/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
+    <loc>https://athena-project.dev/demarrer/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/demarrer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/demarrer/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/"/>
+    <loc>https://athena-project.dev/en/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/a-propos/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/a-propos/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/a-propos/"/>
+    <loc>https://athena-project.dev/en/a-propos/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/a-propos/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/demarrer/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/demarrer/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/demarrer/"/>
+    <loc>https://athena-project.dev/en/demarrer/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/demarrer/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/demarrer/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/faq/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/faq/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/faq/"/>
+    <loc>https://athena-project.dev/en/faq-pannes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/faq-pannes/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/faq-pannes/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/"/>
+    <loc>https://athena-project.dev/en/faq/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/faq/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
+    <loc>https://athena-project.dev/en/fiches-pannes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/fiches-pannes/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/fiches-pannes/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/"/>
+    <loc>https://athena-project.dev/en/flux/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/flux/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/flux/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/categorie/methode/"/>
+    <loc>https://athena-project.dev/en/journal/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/legal/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/legal/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/legal/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-18-site-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-18-site-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-18-site-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-19-proof-per-project/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-19-proof-per-project/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-19-proof-per-project/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/athena-pi/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-20-manifeste-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-20-manifeste-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-20-manifeste-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/athena-pi/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/documentation/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-22-le-verificateur/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-22-le-verificateur/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-22-le-verificateur/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-backlog-autonome/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-backlog-autonome/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-backlog-autonome/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/guide-pi/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-couvertures-generees/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-couvertures-generees/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-couvertures-generees/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/guide-pi/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/documentation/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-recherche-locale/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-recherche-locale/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-recherche-locale/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/preuve/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-repli-modele/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-repli-modele/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-repli-modele/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/kit-serre/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-validation-quotidienne/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-validation-quotidienne/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-validation-quotidienne/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/kit-serre/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/"/>
+    <loc>https://athena-project.dev/en/journal/2026-11-24-vingt-projets-numeriques/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-vingt-projets-numeriques/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-vingt-projets-numeriques/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/kit-serre/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/preuve/"/>
+    <loc>https://athena-project.dev/en/journal/categorie/code/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/categorie/code/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/serre/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/"/>
+    <loc>https://athena-project.dev/en/journal/categorie/methode/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/categorie/methode/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/serre/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/"/>
+    <loc>https://athena-project.dev/en/legal/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/legal/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/services-maison/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/"/>
+    <loc>https://athena-project.dev/en/projets/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/services-maison/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/documentation/"/>
+    <loc>https://athena-project.dev/en/projets/athena-pi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/preuve/"/>
+    <loc>https://athena-project.dev/en/projets/athena-pi/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/documentation/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/faq/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/faq/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/faq/"/>
+    <loc>https://athena-project.dev/en/projets/athena-pi/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/"/>
+    <loc>https://athena-project.dev/en/projets/cerveau-serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/cerveau-serre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/cerveau-serre/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-18-site-preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-18-site-preuve/"/>
+    <loc>https://athena-project.dev/en/projets/cerveau-serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/cerveau-serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/cerveau-serre/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/2026-11-19-proof-per-project/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/journal/2026-11-19-proof-per-project/"/>
+    <loc>https://athena-project.dev/en/projets/guide-pi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/journal/categorie/methode/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/journal/categorie/methode/"/>
+    <loc>https://athena-project.dev/en/projets/guide-pi/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/documentation/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/legal/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/legal/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/legal/"/>
+    <loc>https://athena-project.dev/en/projets/guide-pi/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/"/>
+    <loc>https://athena-project.dev/en/projets/kit-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/athena-pi/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/"/>
+    <loc>https://athena-project.dev/en/projets/kit-preuve/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-preuve/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-preuve/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/athena-pi/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/documentation/"/>
+    <loc>https://athena-project.dev/en/projets/kit-serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/"/>
+    <loc>https://athena-project.dev/en/projets/kit-serre/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/documentation/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/guide-pi/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/"/>
+    <loc>https://athena-project.dev/en/projets/kit-serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/guide-pi/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/documentation/"/>
+    <loc>https://athena-project.dev/en/projets/serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/serre/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/serre/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/guide-pi/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/guide-pi/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/guide-pi/preuve/"/>
+    <loc>https://athena-project.dev/en/projets/serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/serre/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/kit-serre/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/"/>
+    <loc>https://athena-project.dev/en/projets/services-maison/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/documentation/"/>
+    <loc>https://athena-project.dev/en/projets/services-maison/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/documentation/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/kit-serre/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/kit-serre/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/kit-serre/preuve/"/>
+    <loc>https://athena-project.dev/en/projets/services-maison/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/preuve/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/serre/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/"/>
+    <loc>https://athena-project.dev/en/ressources/avant-de-brancher-un-capteur/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/avant-de-brancher-un-capteur/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/avant-de-brancher-un-capteur/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/serre/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/preuve/"/>
+    <loc>https://athena-project.dev/en/ressources/commandes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/commandes/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/commandes/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/services-maison/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/"/>
+    <loc>https://athena-project.dev/en/ressources/format-manifeste/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/format-manifeste/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/format-manifeste/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/services-maison/documentation/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/documentation/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/documentation/"/>
+    <loc>https://athena-project.dev/en/transparence/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/transparence/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/transparence/"/>
   </url>
   <url>
-    <loc>https://athena-rpi.github.io/athena-store/projets/services-maison/preuve/</loc>
-    <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/preuve/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/"/>
+    <loc>https://athena-project.dev/faq-pannes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/faq-pannes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/faq-pannes/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/faq/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/faq/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/fiches-pannes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/fiches-pannes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/fiches-pannes/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/flux/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/flux/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/flux/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-18-site-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-18-site-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-18-site-preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-19-proof-per-project/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-19-proof-per-project/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-19-proof-per-project/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-20-manifeste-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-20-manifeste-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-20-manifeste-preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-22-le-verificateur/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-22-le-verificateur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-22-le-verificateur/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-backlog-autonome/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-backlog-autonome/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-backlog-autonome/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-couvertures-generees/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-couvertures-generees/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-couvertures-generees/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-recherche-locale/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-recherche-locale/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-recherche-locale/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-repli-modele/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-repli-modele/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-repli-modele/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-validation-quotidienne/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-validation-quotidienne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-validation-quotidienne/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/2026-11-24-vingt-projets-numeriques/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/2026-11-24-vingt-projets-numeriques/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/journal/2026-11-24-vingt-projets-numeriques/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/categorie/code/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/categorie/code/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/journal/categorie/methode/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/journal/categorie/methode/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/legal/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/legal/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/athena-pi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/athena-pi/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/documentation/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/athena-pi/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/cerveau-serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/cerveau-serre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/cerveau-serre/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/cerveau-serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/cerveau-serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/cerveau-serre/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/guide-pi/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/guide-pi/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/documentation/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/guide-pi/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/guide-pi/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/guide-pi/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/kit-preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/kit-preuve/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-preuve/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-preuve/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/kit-serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/kit-serre/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/documentation/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/kit-serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-serre/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/serre/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/serre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/serre/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/serre/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/serre/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/serre/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/services-maison/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/services-maison/documentation/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/documentation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/documentation/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/projets/services-maison/preuve/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/preuve/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/preuve/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/ressources/avant-de-brancher-un-capteur/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/avant-de-brancher-un-capteur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/avant-de-brancher-un-capteur/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/ressources/commandes/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/commandes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/commandes/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/ressources/format-manifeste/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/format-manifeste/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/format-manifeste/"/>
+  </url>
+  <url>
+    <loc>https://athena-project.dev/transparence/</loc>
+    <lastmod>2026-11-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://athena-project.dev/transparence/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://athena-project.dev/en/transparence/"/>
   </url>
 </urlset>

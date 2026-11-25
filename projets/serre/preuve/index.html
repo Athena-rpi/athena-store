@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Preuve — La serre — Athéna</title>
 <meta name="description" content="L&#39;état réel des bus et de la base, au moment de la construction."><meta name="generator" content="Athéna — moteur de site statique">
-<link rel="canonical" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
-<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/serre/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
+<link rel="canonical" href="https://athena-project.dev/projets/serre/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/serre/preuve/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/serre/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/projets/serre/preuve/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Athéna">
 <meta property="og:title" content="Preuve — La serre">
-<meta property="og:description" content="L&#39;état réel des bus et de la base, au moment de la construction."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/projets/serre/preuve/">
+<meta property="og:description" content="L&#39;état réel des bus et de la base, au moment de la construction."><meta property="og:url" content="https://athena-project.dev/projets/serre/preuve/">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
@@ -35,7 +35,9 @@
         <li><a href="../../../">Accueil</a></li>
         <li><a href="../../../projets/">Projets</a></li>
         <li><a href="../../../demarrer/">Par où commencer</a></li>
+        <li><a href="../../../flux/">En direct</a></li>
         <li><a href="../../../a-propos/">À propos</a></li>
+        <li><a href="../../../transparence/">Transparence</a></li>
         <li><a href="../../../faq/">FAQ</a></li>
         <li><a href="../../../legal/">Mentions légales</a></li>
         <li><a href="../../../journal/">Journal</a></li>
@@ -59,7 +61,7 @@
 
   <header class="page-entete">
     <h1>Preuve — La serre</h1>
-<p class="lede">L&#39;état réel des bus et de la base, au moment de la construction.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-20</p>
+<p class="lede">L&#39;état réel des bus et de la base, au moment de la construction.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-25</p>
   </header>
 
   <div class="corps">
@@ -106,8 +108,9 @@ dtoverlay=nospi10</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Sondes 1-Wire</p>
       <pre><code>cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 2&gt;/dev/null || echo &#34;aucune sonde&#34;
-00-30e000000000
-00-b0e000000000</code></pre>
+00-209400000000
+00-a09400000000
+00-609400000000</code></pre>
     </div>
 
 
@@ -128,7 +131,7 @@ dtoverlay=nospi10</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
-    <p class="pied-meta">Adresses vérifiées le 2026-11-20 ·
+    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
        <a href="../../../projets/">Projets</a>
     </p>
   </div>

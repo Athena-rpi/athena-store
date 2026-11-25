@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Format du manifeste de preuve, champ par champ — Athéna</title>
+<meta name="description" content="Référence du format preuve.yml — six sections, rôle de chaque champ, erreurs rejetées et pourquoi, exemples de preuves honnêtes et malhonnêtes."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-project.dev/ressources/format-manifeste/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/format-manifeste/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/format-manifeste/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/ressources/format-manifeste/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Format du manifeste de preuve, champ par champ">
+<meta property="og:description" content="Référence du format preuve.yml — six sections, rôle de chaque champ, erreurs rejetées et pourquoi, exemples de preuves honnêtes et malhonnêtes."><meta property="og:url" content="https://athena-project.dev/ressources/format-manifeste/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">Sur cette page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Agent résident d&#39;un Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>Sur cette page</span></label>
+
+    <nav class="nav" aria-label="Sur cette page">
+      <ul>
+        <li><a href="../../">Accueil</a></li>
+        <li><a href="../../projets/">Projets</a></li>
+        <li><a href="../../demarrer/">Par où commencer</a></li>
+        <li><a href="../../flux/">En direct</a></li>
+        <li><a href="../../a-propos/">À propos</a></li>
+        <li><a href="../../transparence/">Transparence</a></li>
+        <li><a href="../../faq/">FAQ</a></li>
+        <li><a href="../../legal/">Mentions légales</a></li>
+        <li><a href="../../journal/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../en/ressources/format-manifeste/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page">
+  <header class="page-entete">
+    <h1>Format du manifeste de preuve, champ par champ</h1>
+<p class="lede">Référence du format preuve.yml — six sections, rôle de chaque champ, erreurs rejetées et pourquoi, exemples de preuves honnêtes et malhonnêtes.</p>  </header>
+
+  <nav class="plan" aria-label="Sur cette page">
+    <p class="plan-titre">Sur cette page</p>
+    <ul>
+      <li><a href="#1-emplacement-et-liaison-au-projet">1. Emplacement et liaison au projet</a></li>
+      <li><a href="#2-les-six-sections">2. Les six sections</a></li>
+      <li><a href="#3-champ-par-champ">3. Champ par champ</a></li>
+      <li><a href="#4-erreurs-rejetées-et-pourquoi">4. Erreurs rejetées, et pourquoi</a></li>
+      <li><a href="#5-preuves-honnêtes-et-malhonnêtes">5. Preuves honnêtes et malhonnêtes</a></li>
+      <li><a href="#6-ce-que-le-format-ne-garantit-pas">6. Ce que le format ne garantit pas</a></li>
+    </ul>
+  </nav>
+
+  <div class="corps">
+  <p>Cette page est la référence du format de manifeste utilisé par le kit « Page de
+preuve ». Elle décrit le comportement <strong>réel</strong> du moteur
+(<code>store/noyau/preuves.py</code>), lu et rejoué le <strong>22 novembre 2026</strong> sur ce Pi. Elle
+complète l&rsquo;article <em>Le manifeste de preuve, ligne à ligne</em> (journal du
+20-11-2026), qui prenait un projet concret ; ici c&rsquo;est le format qui est
+décrit, indépendamment du projet.</p>
+<p>→ Voir aussi <a href="../../ressources/commandes/">l&rsquo;arsenal de vérification</a> : les commandes réellement exécutées sur le Pi, ce que chacune vérifie et le piège qu&rsquo;elle évite.</p>
+<h2 id="1-emplacement-et-liaison-au-projet">1. Emplacement et liaison au projet</h2>
+<p>Un manifeste est un fichier YAML nommé <code>preuve.yml</code> déposé dans
+<code>store/projets/&lt;slug&gt;/preuve.yml</code>. <strong>C&rsquo;est le chemin qui lie le manifeste au
+projet</strong>, pas la clé <code>projet:</code> : le moteur ne lit jamais cette clé. Elle est
+déclarative, pour l&rsquo;humain qui lit le fichier.</p>
+<pre><code class="language-yaml">projet: kit-preuve      # déclaratif — non lu par le moteur
+commandes: …
+</code></pre>
+<p>Un projet sans manifeste est signalé par <code>contrôle()</code> comme
+<code>&lt;slug&gt; : manifeste absent (…/preuve.yml)</code> et la construction échoue.</p>
+<h2 id="2-les-six-sections">2. Les six sections</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Nature</th>
+<th>Lu par <code>collecter()</code></th>
+<th>Vérifié par <code>contrôle()</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tests</code></td>
+<td>liste de <code>{fichier, commande}</code></td>
+<td>oui</td>
+<td>existence du <code>fichier</code></td>
+</tr>
+<tr>
+<td><code>commandes</code></td>
+<td>liste de <code>{titre, commande}</code></td>
+<td>oui</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>compteurs</code></td>
+<td>liste de <code>{titre, base, sql}</code></td>
+<td>oui</td>
+<td>existence de la <code>base</code></td>
+</tr>
+<tr>
+<td><code>fichiers</code></td>
+<td>liste de chemins</td>
+<td>oui</td>
+<td>existence de chaque chemin</td>
+</tr>
+<tr>
+<td><code>captures</code></td>
+<td>liste de <code>{image, titre}</code> ou de chemins</td>
+<td>oui</td>
+<td>existence de l&rsquo;<code>image</code></td>
+</tr>
+<tr>
+<td><code>limites</code></td>
+<td>liste de textes libres</td>
+<td>oui (aplaties)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Une section absente vaut liste vide. <code>commandes</code> et <code>limites</code> sont les seules
+sections dont <code>contrôle()</code> ne vérifie rien : une commande qui échoue est une
+preuve d&rsquo;échec, pas une erreur de construction.</p>
+<h2 id="3-champ-par-champ">3. Champ par champ</h2>
+<h3 id="tests-fichier-commande"><code>tests</code> — <code>fichier</code>, <code>commande</code></h3>
+<pre><code class="language-yaml">tests:
+  - fichier: tests/test_verifier_site.py
+    commande: python3 -m unittest tests.test_verifier_site -q
+</code></pre>
+<ul>
+<li><code>fichier</code> : source contenant des définitions <code>def test_…</code>. Le <strong>nombre</strong> de
+  tests affiché est compté par une regex sur ce source
+  (<code>r"^\s*def (test_\w+)"</code>, drapeau multiligne), pas lu dans la sortie de la
+  commande. Fichier absent → compte <code>0</code>, et <code>contrôle()</code> rejette le manifeste.</li>
+<li><code>commande</code> : shell exécutée avec <code>shell=True</code>, depuis la racine de la couche,
+  délai maximal 60 s. Le <strong>verdict</strong> (OK / échec) vient du code de retour, pas
+  du nombre de tests. Supprimer un <code>def test_</code> fait baisser le chiffre même si
+  la commande réussit encore.</li>
+</ul>
+<p>Le nombre et le verdict sont donc deux mesures distinctes : l&rsquo;une vient du
+fichier, l&rsquo;autre de l&rsquo;exécution.</p>
+<h3 id="commandes-titre-commande"><code>commandes</code> — <code>titre</code>, <code>commande</code></h3>
+<pre><code class="language-yaml">commandes:
+  - titre: Système et architecture, relus sur la machine
+    commande: uname -srm
+</code></pre>
+<ul>
+<li><code>titre</code> : libellé libre affiché en page ; absent, le moteur affiche la
+  commande elle-même.</li>
+<li><code>commande</code> : cf. exécution ci-dessous. Stdout <strong>et</strong> stderr sont concaténés ;
+  si la sortie est vide, la page affiche <code>(aucune sortie)</code>.</li>
+</ul>
+<p>Règle d&rsquo;écriture (non garantie par le moteur) : les commandes tournent avec les
+droits de celui qui construit le site et doivent rester <strong>en lecture seule</strong>.</p>
+<h3 id="compteurs-titre-base-sql"><code>compteurs</code> — <code>titre</code>, <code>base</code>, <code>sql</code></h3>
+<pre><code class="language-yaml">compteurs:
+  - titre: Relevés de santé enregistrés sur le Pi
+    base: data/health.db
+    sql: select count(*) from samples
+</code></pre>
+<ul>
+<li><code>base</code> : fichier SQLite. Un chemin absolu (<code>/…</code>) est ouvert tel quel ; sinon
+  il passe par la résolution décrite plus bas. La connexion se fait en URI
+  <code>file:…?mode=ro</code> : <strong>lecture seule</strong>, le manifeste ne peut pas écrire dans la
+  base qu&rsquo;il mesure.</li>
+<li><code>sql</code> : requête exécutée ; la première ligne du résultat est affichée, ses
+  colonnes jointes par un espace. Une requête invalide ou une base absente
+  produit une erreur <strong>affichée</strong> (<code>collecter()</code> ne lève jamais) ; une base
+  absente est en plus <strong>rejetée</strong> par <code>contrôle()</code>.</li>
+</ul>
+<h3 id="fichiers-liste-de-chemins"><code>fichiers</code> — liste de chemins</h3>
+<pre><code class="language-yaml">fichiers:
+  - store/noyau/preuves.py
+  - store/projets/kit-preuve/README.md
+</code></pre>
+<p>Pour chaque chemin, le moteur affiche la <strong>taille en octets</strong> et les <strong>12
+premiers caractères hexadécimaux du SHA-256</strong> du fichier. Un fichier livré qui
+change d&rsquo;empreinte se voit. Un chemin absent est marqué <code>absent</code> dans la page
+et rejeté par <code>contrôle()</code>.</p>
+<h3 id="captures-image-titre"><code>captures</code> — <code>image</code>, <code>titre</code></h3>
+<pre><code class="language-yaml">captures:
+  - image: ressources/extrait-kit-page-1.png
+    titre: &quot;Exemple de rendu : extrait figé d'une page du guide&quot;
+</code></pre>
+<p>Deux formes acceptées : <code>{image, titre}</code>, ou un simple chemin en texte
+(<code>- ressources/image.png</code>, titre vide). L&rsquo;image doit exister, sinon
+<code>contrôle()</code> rejette. Mettre des <strong>guillemets</strong> au titre s&rsquo;il contient un
+deux-points, sinon YAML le lit comme une structure.</p>
+<h3 id="limites-texte-libre"><code>limites</code> — texte libre</h3>
+<pre><code class="language-yaml">limites:
+  - &quot;Cette page ne prouve aucune qualité métier.&quot;
+  - &quot;Le compteur est un instantané, pas une garantie.&quot;
+</code></pre>
+<p>Bloc rendu en bas de page. Piège réel : une limite contenant <code>:</code> non citée est
+lue par YAML comme un dictionnaire ; le moteur la remet à plat
+(<code>_aplatir_limite</code>) en <code>clé : valeur — clé : valeur</code> plutôt que d&rsquo;afficher du
+JSON. Citez vos limites.</p>
+<h3 id="résolution-des-chemins-et-exécution">Résolution des chemins et exécution</h3>
+<ul>
+<li><code>ressources/…</code> et <code>assets/…</code> sont résolus depuis <code>store/</code> ; <strong>tous les
+  autres</strong> chemins depuis la racine de la couche (<code>~/Documents/Athena</code>).</li>
+<li>Chaque commande tourne avec <code>cwd</code> = racine de la couche, <code>timeout=60</code> s,
+  <code>shell=True</code>. Sortie tronquée à ses <strong>12 dernières lignes</strong> et <strong>1 200
+  derniers caractères</strong> : un long journal peut masquer son début.</li>
+<li>Verdict : <code>0</code> = OK ; sinon <code>code de retour N</code> ; dépassement → <code>timeout après
+  60 s</code> ; erreur système → message Python. La date affichée (« recalculé le »)
+  est <code>date.today()</code>, jamais une date écrite à la main.</li>
+</ul>
+<h2 id="4-erreurs-rejetées-et-pourquoi">4. Erreurs rejetées, et pourquoi</h2>
+<p><code>contrôle('&lt;slug&gt;')</code> est joué <strong>avant</strong> la construction par
+<code>store/outils/site.py</code>. Chaque entrée devient une erreur et la construction
+s&rsquo;arrête :</p>
+<table>
+<thead>
+<tr>
+<th>Erreur renvoyée</th>
+<th>Cause</th>
+<th>Pourquoi c&rsquo;est rejeté</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;slug&gt; : manifeste absent (…)</code></td>
+<td>pas de <code>preuve.yml</code></td>
+<td>une page de preuve sans source de preuve n&rsquo;a pas de sens</td>
+</tr>
+<tr>
+<td><code>test introuvable : &lt;fichier&gt;</code></td>
+<td><code>fichier</code> de <code>tests</code> inexistant</td>
+<td>le nombre de tests serait un <code>0</code> silencieux, pas une mesure</td>
+</tr>
+<tr>
+<td><code>fichier introuvable : &lt;chemin&gt;</code></td>
+<td>chemin de <code>fichiers</code> inexistant</td>
+<td>annoncer un fichier livré qui n&rsquo;existe pas ment sur le contenu</td>
+</tr>
+<tr>
+<td><code>capture introuvable : &lt;image&gt;</code></td>
+<td>image de <code>captures</code> inexistante</td>
+<td>la galerie afficherait une image cassée</td>
+</tr>
+<tr>
+<td><code>base introuvable : &lt;base&gt;</code></td>
+<td><code>base</code> de <code>compteurs</code> inexistante</td>
+<td>le compteur ne peut pas être rejoué par un lecteur</td>
+</tr>
+</tbody>
+</table>
+<p>Ces cinq messages ont été relevés tels quels en rejouant <code>contrôle()</code> sur un
+manifeste temporaire contenant ces cinq défauts (22-11-2026). À l&rsquo;inverse, une
+commande en échec, un timeout, une requête SQL invalide ou une base absente
+<strong>dans <code>collecter()</code></strong> ne sont pas rejetés : l&rsquo;erreur est publiée dans la page.
+C&rsquo;est la distinction centrale : <em>on refuse ce qui ne peut pas être mesuré, on
+affiche ce qui a été mesuré et qui a échoué.</em></p>
+<p>Au-delà du moteur, <code>site.py check</code> (<code>store/noyau/verifier.py</code>) rejette aussi
+une traduction manquante, un lien interne cassé, une page orpheline et un jeton
+de donnée réelle non remplacé.</p>
+<h2 id="5-preuves-honnêtes-et-malhonnêtes">5. Preuves honnêtes et malhonnêtes</h2>
+<h3 id="honnête-mesurer-montrer-lrsquoéchec-dire-la-limite">Honnête : mesurer, montrer l&rsquo;échec, dire la limite</h3>
+<pre><code class="language-yaml">commandes:
+  - titre: Bus I2C et SPI
+    commande: ls /dev/i2c-* /dev/spidev* 2&gt;/dev/null
+limites:
+  - &quot;Le bus I2C n'a pas de module i2c-dev chargé : aucun périphérique.&quot;
+</code></pre>
+<p>Ici la commande sort en <code>code de retour 2</code> parce que <code>/dev/i2c-1</code> n&rsquo;existe pas ;
+le moteur <strong>affiche ce code</strong>, et la <code>limite</code> dit ce que la preuve ne montre pas.
+Le lecteur voit à la fois la mesure et son absence de portée. C&rsquo;est le contrat
+du kit.</p>
+<h3 id="malhonnête-écrire-le-chiffre-au-lieu-de-le-mesurer">Malhonnête : écrire le chiffre au lieu de le mesurer</h3>
+<pre><code class="language-yaml">commandes:
+  - titre: Nombre de tests
+    commande: echo &quot;12 tests OK&quot;        # MAUVAIS : le chiffre est écrit à la main
+</code></pre>
+<p>La page affichera <code>12 tests OK</code>, mais rien n&rsquo;a été exécuté ni compté. Le chiffre
+est une affirmation, pas une preuve. Le manifeste doit <strong>déléguer</strong> le chiffre
+à une commande ou à un compteur SQL.</p>
+<h3 id="malhonnête-masquer-lrsquoéchec">Malhonnête : masquer l&rsquo;échec</h3>
+<pre><code class="language-yaml">commandes:
+  - titre: Bus I2C
+    commande: ls /dev/i2c-* 2&gt;/dev/null || true   # MAUVAIS : || true force le code 0
+</code></pre>
+<p><code>|| true</code> transforme un échec en succès : le verdict « OK » affiché ne veut
+plus rien dire. Même effet avec une redirection qui cache stderr alors que la
+commande échoue, ou un <code>exit 0</code> forcé. Une preuve honnête laisse le code de
+retour réel apparaître.</p>
+<h3 id="malhonnête-sélection-biaisée-et-limites-absentes">Malhonnête : sélection biaisée et limites absentes</h3>
+<p>Un manifeste qui ne mesure que ce qui arrange — en omettant les tests qui
+échouent, les fichiers manquants ou la section <code>limites</code> — reste techniquement
+valide pour <code>contrôle()</code>. Le moteur ne peut pas juger l&rsquo;honnêteté du <strong>choix</strong>
+des mesures : c&rsquo;est pour cela que le manifeste est public dans le dépôt et que
+la section <code>limites</code> est attendue. Un lecteur doit pouvoir lire ce qui est
+mesuré <strong>et ce qui ne l&rsquo;est pas</strong>.</p>
+<h2 id="6-ce-que-le-format-ne-garantit-pas">6. Ce que le format ne garantit pas</h2>
+<ul>
+<li>Que les mesures choisies soient représentatives : c&rsquo;est un choix humain,
+  visible dans le manifeste public.</li>
+<li>Que les commandes soient inoffensives : c&rsquo;est une règle d&rsquo;écriture, pas une
+  garde du moteur.</li>
+<li>Que le début d&rsquo;une longue sortie soit visible : troncature à 12 lignes /
+  1 200 caractères.</li>
+<li>Que les tests du moteur lui-même existent : la confiance repose aujourd&rsquo;hui
+  sur la relecture du code et sur les exemples rejoués (tâche T89 du backlog).</li>
+</ul>
+  </div>
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
+    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
+       <a href="../../projets/">Projets</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+<script src="../../assets/widgets/adresse.js" defer></script>
+</body>
+</html>

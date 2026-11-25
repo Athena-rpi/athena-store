@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preuve — Kit page de preuve — Athéna</title>
+<meta name="description" content="Le kit prouvé par lui-même — six sections relues à chaque construction du site."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-project.dev/projets/kit-preuve/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/kit-preuve/preuve/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/kit-preuve/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/projets/kit-preuve/preuve/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Preuve — Kit page de preuve">
+<meta property="og:description" content="Le kit prouvé par lui-même — six sections relues à chaque construction du site."><meta property="og:url" content="https://athena-project.dev/projets/kit-preuve/preuve/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">Sur cette page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../../">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Agent résident d&#39;un Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>Sur cette page</span></label>
+
+    <nav class="nav" aria-label="Sur cette page">
+      <ul>
+        <li><a href="../../../">Accueil</a></li>
+        <li><a href="../../../projets/">Projets</a></li>
+        <li><a href="../../../demarrer/">Par où commencer</a></li>
+        <li><a href="../../../flux/">En direct</a></li>
+        <li><a href="../../../a-propos/">À propos</a></li>
+        <li><a href="../../../transparence/">Transparence</a></li>
+        <li><a href="../../../faq/">FAQ</a></li>
+        <li><a href="../../../legal/">Mentions légales</a></li>
+        <li><a href="../../../journal/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../../en/projets/kit-preuve/preuve/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page preuve-page">
+  <nav class="fil-ariane" aria-label="Fil d'Ariane">
+    <a href="../../../projets/">Projets</a>
+    <span aria-hidden="true">/</span>
+<a href="../../../projets/kit-preuve/">Kit page de preuve</a>
+    <span aria-hidden="true">/</span>    <span>La preuve</span>
+  </nav>
+
+  <header class="page-entete">
+    <h1>Preuve — Kit page de preuve</h1>
+<p class="lede">Le kit prouvé par lui-même — six sections relues à chaque construction du site.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-25</p>
+  </header>
+
+  <div class="corps">
+  <h2 id="ce-qui-est-exécuté">Ce qui est exécuté</h2>
+<p>Les tests du vérificateur du site et de la santé du Pi, le système et
+l&rsquo;interpréteur relus sur la machine, le dernier commit du dépôt.</p>
+<h2 id="ce-qui-est-compté">Ce qui est compté</h2>
+<p>Les relevés de santé et les alertes en base, lus en lecture seule. Les fichiers
+du moteur sont mesurés (taille et empreinte SHA-256) : un changement se voit.</p>
+<h2 id="les-limites">Les limites</h2>
+<p>Elles sont dans le manifeste et reprises en bas de page. Cette page prouve que
+la mécanique fonctionne ici — pas qu&rsquo;un produit est meilleur qu&rsquo;un autre.</p>
+  </div>
+
+
+    <h2 id="tests">Tests</h2>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_verifier_site.py</p>
+      <p class="preuve-verdict ok">
+        <strong>11</strong> tests — OK      </p>
+      <pre><code>python3 -m unittest tests.test_verifier_site -q
+----------------------------------------------------------------------
+Ran 11 tests in 0.009s
+
+OK</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_sante.py</p>
+      <p class="preuve-verdict ok">
+        <strong>12</strong> tests — OK      </p>
+      <pre><code>python3 -m unittest tests.test_sante -q
+----------------------------------------------------------------------
+Ran 12 tests in 0.004s
+
+OK</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">tests/test_preuves.py</p>
+      <p class="preuve-verdict ok">
+        <strong>2</strong> tests — OK      </p>
+      <pre><code>python3 -m unittest tests.test_preuves -q
+----------------------------------------------------------------------
+Ran 2 tests in 0.006s
+
+OK</code></pre>
+    </div>
+
+    <h2 id="compteurs">Compteurs</h2>
+    <table>
+      <tr><th>Compteurs</th><th>valeur</th></tr>
+      <tr><td>Relevés de santé enregistrés sur le Pi</td><td><code>9346</code></td></tr>
+      <tr><td>Alertes enregistrées</td><td><code>4</code></td></tr>
+    </table>
+
+    <h2 id="commandes">Commandes</h2>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Système et architecture, relus sur la machine</p>
+      <pre><code>uname -srm
+Linux 6.18.50+rpt-rpi-2712 aarch64</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Interpréteur Python utilisé pour la preuve</p>
+      <pre><code>python3 --version
+Python 3.13.5</code></pre>
+    </div>
+    <div class="preuve-bloc">
+      <p class="preuve-titre">Dernier commit de la couche, relu dans le dépôt</p>
+      <pre><code>git log -1 --format=&#39;%h %ad %s&#39; --date=short
+ccea6f1 2026-11-25 sauvegarde auto 2026-11-25 11:10</code></pre>
+    </div>
+
+    <h2 id="fichiers">Fichiers</h2>
+    <table>
+      <tr><th>fichier</th><th>taille</th><th>empreinte</th></tr>
+      <tr>
+        <td><code>store/noyau/preuves.py</code></td>
+        <td>6.8 Ko</td>
+        <td><code>f1cf2f74789a</code></td>
+      </tr>
+      <tr>
+        <td><code>store/noyau/verifier.py</code></td>
+        <td>4.6 Ko</td>
+        <td><code>d4789ca2af28</code></td>
+      </tr>
+      <tr>
+        <td><code>store/outils/site.py</code></td>
+        <td>11.4 Ko</td>
+        <td><code>98ed28005f52</code></td>
+      </tr>
+      <tr>
+        <td><code>store/projets/kit-preuve/README.md</code></td>
+        <td>6.9 Ko</td>
+        <td><code>9cd6ef738878</code></td>
+      </tr>
+    </table>
+
+    <h2 id="captures">Images</h2>
+    <div class="galerie">
+      <figure>
+        <img src="../../../ressources/extrait-kit-page-1.png" alt="Exemple de rendu : extrait figé d&#39;une page du guide">
+<figcaption>Exemple de rendu : extrait figé d&#39;une page du guide</figcaption>      </figure>
+    </div>
+
+    <h2 id="limites">Ce qui n&#39;est pas prouvé</h2>
+    <ul class="liste-limites">
+<li>Cette page prouve que la mécanique du kit fonctionne ici ; elle ne prouve aucune qualité métier.</li><li>Le nombre de tests vient d&#39;une regex sur le fichier source et le verdict de l&#39;exécution : supprimer un test fait baisser le chiffre (prouvé par tests/test_preuves.py, rejoué ci-dessus).</li><li>Les compteurs sont lus en lecture seule et changent à chaque relevé : ce sont des instantanés, pas des garanties.</li><li>La capture est figée ; la page, elle, est recalculée à chaque construction du site.</li>    </ul>
+
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
+    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
+       <a href="../../../projets/">Projets</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../../assets/site.js" defer></script>
+<script src="../../../assets/widgets/adresse.js" defer></script>
+</body>
+</html>

@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Proof — Home services — Athéna</title>
 <meta name="description" content="The real services running on the Pi, recorded when this page is built."><meta name="generator" content="Athéna — moteur de site statique">
-<link rel="canonical" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/">
-<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/services-maison/preuve/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/">
+<link rel="canonical" href="https://athena-project.dev/en/projets/services-maison/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/services-maison/preuve/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/services-maison/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/en/projets/services-maison/preuve/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Athéna">
 <meta property="og:title" content="Proof — Home services">
-<meta property="og:description" content="The real services running on the Pi, recorded when this page is built."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/en/projets/services-maison/preuve/">
+<meta property="og:description" content="The real services running on the Pi, recorded when this page is built."><meta property="og:url" content="https://athena-project.dev/en/projets/services-maison/preuve/">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../../../../assets/favicon.svg" type="image/svg+xml">
@@ -35,7 +35,9 @@
         <li><a href="../../../../en/">Home</a></li>
         <li><a href="../../../../en/projets/">Projects</a></li>
         <li><a href="../../../../en/demarrer/">Where to start</a></li>
+        <li><a href="../../../../en/flux/">Live</a></li>
         <li><a href="../../../../en/a-propos/">About</a></li>
+        <li><a href="../../../../en/transparence/">Transparency</a></li>
         <li><a href="../../../../en/faq/">FAQ</a></li>
         <li><a href="../../../../en/legal/">Legal</a></li>
         <li><a href="../../../../en/journal/">Journal</a></li>
@@ -59,7 +61,7 @@
 
   <header class="page-entete">
     <h1>Proof — Home services</h1>
-<p class="lede">The real services running on the Pi, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-20</p>
+<p class="lede">The real services running on the Pi, recorded when this page is built.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-25</p>
   </header>
 
   <div class="corps">
@@ -79,16 +81,27 @@ distribution, service names and paths change.</p>
     <h2 id="tests">Tests</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_sante.py</p>
-      <p class="preuve-verdict ko">
-        <strong>12</strong> tests — timeout après 60 s      </p>
+      <p class="preuve-verdict ok">
+        <strong>12</strong> tests — OK      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-</code></pre>
+USDC/Ethereum ignoré : RPC indisponible
+USDC/Base ignoré : pop from empty list
+USDC/Ethereum ignoré : pop from empty list
+usage: python3 -m unittest [-h] [--type {html,json,pdf,texte}] [--json]
+                           [--timeout TIMEOUT] [--registre]
+                           [--fichier FICHIER]
+                           [url]
+python3 -m unittest: error: une URL, ou --registre, est requis
+----------------------------------------------------------------------
+Ran 795 tests in 14.621s
+
+OK (skipped=2)</code></pre>
     </div>
 
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>2737</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>9347</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
@@ -103,23 +116,23 @@ active</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-20T15:35:43-05:00
-  température   45.0 °C   (24 h : min 38.4 / moy 41.2 / max 46.6)
   throttled    0x0
-  tension cœur  0.75 V
-  uptime        24.0 h   charge 0.38
-  mémoire dispo 14254.8 Mo   zram 0.0 Mo
-  disque        9.96 %   (24 h max 9.96 %)
-  unités en échec 0   wlan -63.0 dBm   ntp oui
-  échantillons 24 h : 1366   événements throttle : 0
+  tension cœur  0.8325 V
+  uptime        139.7 h   charge 0.65
+  mémoire dispo 13992.7 Mo   zram 136.5 Mo
+  disque        20.63 %   (24 h max 21.94 %)
+  unités en échec 0   wlan -60.0 dBm   ntp oui
+  échantillons 24 h : 1377   événements throttle : 0
   alertes récentes :
+    2026-11-24T09:12:43-05:00  failed_units  1 unité(s) en échec
+    2026-11-21T18:55:03-05:00  failed_units  1 unité(s) en échec
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">Sauvegardes du vault conservées</p>
       <pre><code>find backups -name &#39;vault-*.bundle&#39; | wc -l
-76</code></pre>
+271</code></pre>
     </div>
 
     <h2 id="fichiers">Files</h2>
@@ -148,7 +161,7 @@ Dernier échantillon : 2026-11-20T15:35:43-05:00
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-20 ·
+    <p class="pied-meta">Addresses checked on 2026-11-25 ·
        <a href="../../../../en/projets/">Projects</a>
     </p>
   </div>

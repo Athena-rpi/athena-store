@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Athéna — code</title>
+  <link href="https://athena-project.dev/journal/categorie/code/"/>
+  <id>https://athena-project.dev/journal/categorie/code/</id>
+  <updated>2026-11-25</updated>
+  <entry>
+    <title>La recherche locale, ou comment rien ne sort de la page</title>
+    <link href="https://athena-project.dev/journal/2026-11-24-recherche-locale/"/>
+    <id>https://athena-project.dev/journal/2026-11-24-recherche-locale/</id>
+    <updated>2026-11-24</updated>
+    <summary>L'index journal.json, le filtrage dans le navigateur, et la mesure d'un cas positif (3 sur 6) et d'un cas négatif (0 sur 6) sur le vrai widget.</summary>
+  </entry>
+  <entry>
+    <title>Couvertures générées : taille, coupure, mesure</title>
+    <link href="https://athena-project.dev/journal/2026-11-24-couvertures-generees/"/>
+    <id>https://athena-project.dev/journal/2026-11-24-couvertures-generees/</id>
+    <updated>2026-11-24</updated>
+    <summary>Comment le moteur calcule la taille du titre, le coupe en deux lignes et relit le SVG — avec le cas réel du titre rogné à 1228 px et la mesure x=989/1200.</summary>
+  </entry>
+  <entry>
+    <title>Le vérificateur, ou comment le site ne triche pas</title>
+    <link href="https://athena-project.dev/journal/2026-11-22-le-verificateur/"/>
+    <id>https://athena-project.dev/journal/2026-11-22-le-verificateur/</id>
+    <updated>2026-11-22</updated>
+    <summary>Ce que contrôle noyau/verifier.py, et le test qui prouve qu'il contrôle quelque chose — avec un cas réel attrapé.</summary>
+  </entry>
+</feed>

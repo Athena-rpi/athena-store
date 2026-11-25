@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arsenal de vérification — les commandes du Pi, ce qu&#39;elles prouvent — Athéna</title>
+<meta name="description" content="Référence des commandes réellement exécutées sur ce Pi 5, découpée en fiches — chaque fiche donne la commande, ce qu&#39;elle vérifie et le piège qu&#39;elle évite. Sorties relevées le 22 novembre 2026."><meta name="generator" content="Athéna — moteur de site statique">
+<link rel="canonical" href="https://athena-project.dev/ressources/commandes/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/ressources/commandes/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/ressources/commandes/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/ressources/commandes/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Athéna">
+<meta property="og:title" content="Arsenal de vérification — les commandes du Pi, ce qu&#39;elles prouvent">
+<meta property="og:description" content="Référence des commandes réellement exécutées sur ce Pi 5, découpée en fiches — chaque fiche donne la commande, ce qu&#39;elle vérifie et le piège qu&#39;elle évite. Sorties relevées le 22 novembre 2026."><meta property="og:url" content="https://athena-project.dev/ressources/commandes/">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<a class="evitement" href="#contenu">Sur cette page</a>
+
+<header class="entete">
+  <div class="conteneur entete-interieur">
+    <a class="marque" href="../../">
+      <span class="marque-nom">Athéna</span>
+      <span class="marque-role">Agent résident d&#39;un Raspberry Pi 5</span>
+    </a>
+
+    <input class="nav-bascule" type="checkbox" id="nav-bascule" aria-hidden="true">
+    <label class="nav-bouton" for="nav-bascule"><span>Sur cette page</span></label>
+
+    <nav class="nav" aria-label="Sur cette page">
+      <ul>
+        <li><a href="../../">Accueil</a></li>
+        <li><a href="../../projets/">Projets</a></li>
+        <li><a href="../../demarrer/">Par où commencer</a></li>
+        <li><a href="../../flux/">En direct</a></li>
+        <li><a href="../../a-propos/">À propos</a></li>
+        <li><a href="../../transparence/">Transparence</a></li>
+        <li><a href="../../faq/">FAQ</a></li>
+        <li><a href="../../legal/">Mentions légales</a></li>
+        <li><a href="../../journal/">Journal</a></li>
+      </ul>
+    </nav>
+
+    <div class="langues">
+      <a href="../../en/ressources/commandes/" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu" class="conteneur">
+<article class="page">
+  <header class="page-entete">
+    <h1>Arsenal de vérification — les commandes du Pi, ce qu&#39;elles prouvent</h1>
+<p class="lede">Référence des commandes réellement exécutées sur ce Pi 5, découpée en fiches — chaque fiche donne la commande, ce qu&#39;elle vérifie et le piège qu&#39;elle évite. Sorties relevées le 22 novembre 2026.</p>  </header>
+
+  <nav class="plan" aria-label="Sur cette page">
+    <p class="plan-titre">Sur cette page</p>
+    <ul>
+      <li><a href="#1-lrsquoidentité-pas-lrsquoarchitecture-seule">1. L&amp;rsquo;identité, pas l&amp;rsquo;architecture seule</a></li>
+      <li><a href="#2-gpio-le-bon-contrôleur-le-bon-numéro">2. GPIO : le bon contrôleur, le bon numéro</a></li>
+      <li><a href="#3-chaleur-et-throttling">3. Chaleur et throttling</a></li>
+      <li><a href="#4-bus-et-capteurs">4. Bus et capteurs</a></li>
+      <li><a href="#5-services-et-minuteurs">5. Services et minuteurs</a></li>
+      <li><a href="#6-réseau-local">6. Réseau local</a></li>
+      <li><a href="#7-santé-et-données">7. Santé et données</a></li>
+      <li><a href="#8-git-et-sauvegarde">8. Git et sauvegarde</a></li>
+    </ul>
+  </nav>
+
+  <div class="corps">
+  <p>Cette page recense les commandes <strong>réellement utilisées</strong> sur ce Raspberry Pi 5 par la couche Athéna, les manifestes de preuve et les vérifications quotidiennes. Chacune a été exécutée le <strong>22 novembre 2026</strong> sur la machine qui héberge le site ; les sorties reproduites sont celles obtenues, sans correction.</p>
+<p>Le contenu est découpé en <strong>19 fiches, une par commande</strong> (F01 à F19). Chaque fiche répond à trois questions : la commande lancée, ce qu&rsquo;elle vérifie, le piège qu&rsquo;elle évite. Les fiches sont regroupées par thème ; la numérotation est stable et sert d&rsquo;ancre.</p>
+<p>Elle complète <a href="../../ressources/avant-de-brancher-un-capteur/">Avant de brancher un capteur</a> (électricité et bus) et <a href="../../ressources/format-manifeste/">Format du manifeste de preuve</a> (comment une commande devient une preuve). Ici, c&rsquo;est l&rsquo;arsenal lui-même qui est décrit.</p>
+<h2 id="1-lrsquoidentité-pas-lrsquoarchitecture-seule">1. L&rsquo;identité, pas l&rsquo;architecture seule</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f01-tr--d-0">F01 — <code>tr -d '\0'</code></h3>
+<pre><code>$ tr -d '\0' &lt;/proc/device-tree/model
+Raspberry Pi 5 Model B Rev 1.1
+</code></pre>
+<p><strong>Vérifie</strong> : le modèle exact de la carte, révision 1.1.</p>
+<p><strong>Piège évité</strong> : <code>/proc/cpuinfo</code> donne le processeur (BCM2712) mais pas la révision de la carte. <code>cat /proc/device-tree/model</code> se termine par un octet NUL sans retour à la ligne et colle le prompt ; <code>tr -d '\0'</code> produit une ligne propre.</p></div>
+<div class="carte"><h3 id="f02-uname--srm">F02 — <code>uname -srm</code></h3>
+<pre><code>$ uname -srm
+Linux 6.18.50+rpt-rpi-2712 aarch64
+</code></pre>
+<p><strong>Vérifie</strong> : le noyau et l&rsquo;architecture arm64.</p>
+<p><strong>Piège évité</strong> : <code>uname -m</code> seul donne <code>aarch64</code> et ne dit rien du noyau ; le suffixe <code>+rpt-rpi-2712</code> confirme un noyau Raspberry Pi.</p></div>
+<div class="carte"><h3 id="f03-python3---version">F03 — <code>python3 --version</code></h3>
+<pre><code>$ python3 --version
+Python 3.13.5
+</code></pre>
+<p><strong>Vérifie</strong> : l&rsquo;interpréteur qui exécute les scripts de preuve.</p>
+<p><strong>Piège évité</strong> : <code>python --version</code> peut désigner un autre interpréteur — les manifestes utilisent explicitement <code>python3</code>.</p></div>
+</div>
+<h2 id="2-gpio-le-bon-contrôleur-le-bon-numéro">2. GPIO : le bon contrôleur, le bon numéro</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f04-gpiodetect">F04 — <code>gpiodetect</code></h3>
+<pre><code>$ gpiodetect
+gpiochip0 [pinctrl-rp1] (54 lines)
+gpiochip10 [gpio-brcmstb@107d508500] (32 lines)
+gpiochip11 [gpio-brcmstb@107d517c00] (15 lines)
+gpiochip12 [gpio-brcmstb@107d517c20] (6 lines)
+gpiochip13 [gpio-brcmstb@107d508520] (4 lines)
+</code></pre>
+<p><strong>Vérifie</strong> : le header est <code>gpiochip0</code>, pilote <code>pinctrl-rp1</code> — la southbridge RP1 du Pi 5.</p>
+<p><strong>Piège évité</strong> : <code>gpiodetect</code> renvoie aussi quatre chips BRCMSTB ; l&rsquo;erreur serait de prendre « le premier » ou <code>gpiochip10</code>. <code>RPi.GPIO</code> est importable sur cette machine, mais la couche utilise <code>lgpio</code>/<code>gpiod</code> et les numéros BCM.</p></div>
+<div class="carte"><h3 id="f05-gpioinfo-grep-onewire">F05 — <code>gpioinfo | grep onewire</code></h3>
+<pre><code>$ gpioinfo | grep onewire
+        line   4: &quot;GPIO4&quot;   output drive=open-drain consumer=&quot;onewire@0&quot;
+</code></pre>
+<p><strong>Vérifie</strong> : BCM4 est réservé au bus 1-Wire.</p>
+<p><strong>Piège évité</strong> : la ligne apparaît en <code>output</code> parce qu&rsquo;elle est pilotée en sortie à cet instant du cycle 1-Wire ; <code>pinctrl get 4</code> peut afficher <code>input</code> une microseconde plus tard. Ce n&rsquo;est pas un conflit. La broche physique 7 est BCM4 : on raisonne en BCM, jamais en numéro de broche.</p></div>
+</div>
+<h2 id="3-chaleur-et-throttling">3. Chaleur et throttling</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f06-vcgencmd-measuretemp-ampamp-vcgencmd-getthrottled">F06 — <code>vcgencmd measure_temp &amp;&amp; vcgencmd get_throttled</code></h3>
+<pre><code>$ vcgencmd measure_temp &amp;&amp; vcgencmd get_throttled
+temp=42.8'C
+throttled=0x0
+</code></pre>
+<p><strong>Vérifie</strong> : température du SoC et état d&rsquo;alimentation/thermique.</p>
+<p><strong>Piège évité</strong> : lire seulement la température. <code>throttled=0x0</code> est la preuve qu&rsquo;aucun throttling n&rsquo;est actif ni survenu ; un code non nul se décompose en bits courants et passés. Le <code>&amp;&amp;</code> garantit que les deux relevés viennent du même instant ; avec <code>;</code> ils pourraient être séparés. Repère de throttling thermique : environ 80 °C — 42,8 °C relevés ici.</p></div>
+</div>
+<h2 id="4-bus-et-capteurs">4. Bus et capteurs</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f07-ls-devi2c--devspidev-2gtdevnull">F07 — <code>ls /dev/i2c-* /dev/spidev* 2&gt;/dev/null</code></h3>
+<pre><code>$ ls /dev/i2c-* /dev/spidev* 2&gt;/dev/null
+/dev/spidev0.0
+/dev/spidev0.1
+(code de retour 2)
+</code></pre>
+<p><strong>Vérifie</strong> : deux périphériques SPI présents, aucun périphérique I2C (<code>i2c_arm=on</code> dans la config mais le module <code>i2c-dev</code> n&rsquo;est pas chargé au boot, donc pas de <code>/dev/i2c-1</code>).</p>
+<p><strong>Piège évité</strong> : <code>2&gt;/dev/null</code> cache le message d&rsquo;erreur mais <strong>le code 2 reste</strong> — c&rsquo;est une preuve d&rsquo;absence, pas une panne de la commande. Ajouter <code>|| true</code> transformerait cette absence en succès : à proscrire dans un manifeste.</p></div>
+<div class="carte"><h3 id="f08-cat-sysbusw1devicesw1busmaster1w1masterslaves">F08 — <code>cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves</code></h3>
+<pre><code>$ cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves
+00-666800000000
+00-e66800000000
+</code></pre>
+<p><strong>Vérifie</strong> : le bus 1-Wire énumère deux ROMs de famille <code>0x00</code>.</p>
+<p><strong>Piège évité</strong> : ces ROMs changent à chaque lecture et n&rsquo;ont pas de fichier <code>w1_slave</code> — ce sont des fantômes d&rsquo;un bus flottant, pas des sondes. Une vraie sonde donne une ROM <code>28-…</code> stable et <code>crc=… YES</code> dans <code>w1_slave</code>. La liste relevée ici diffère de celle du guide : attendu sur un bus sans capteur.</p></div>
+</div>
+<h2 id="5-services-et-minuteurs">5. Services et minuteurs</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f09-systemctl---failed---no-pager">F09 — <code>systemctl --failed --no-pager</code></h3>
+<pre><code>$ systemctl --failed --no-pager
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+</code></pre>
+<p><strong>Vérifie</strong> : aucune unité systemd en échec.</p>
+<p><strong>Piège évité</strong> : <code>--no-pager</code> est indispensable en cron, sinon le pager attend une touche. <code>--failed</code> ne remplace pas <code>is-active</code> : une unité simplement inactive n&rsquo;est pas en échec.</p></div>
+<div class="carte"><h3 id="f10-systemctl-list-timers-athena----no-pager">F10 — <code>systemctl list-timers 'athena-*' --no-pager</code></h3>
+<pre><code>$ systemctl list-timers 'athena-*' --no-pager
+NEXT                            LEFT LAST                              PASSED UNIT
+Sun 2026-11-22 19:49:48 EST      30s Sun 2026-11-22 19:48:48 EST      29s ago athena-health.timer
+Sun 2026-11-22 19:50:33 EST 1min 15s Sun 2026-11-22 17:50:33 EST 1h 58min ago athena-git-sync.timer
+Sun 2026-11-22 19:51:00 EST 1min 42s Sun 2026-11-22 19:48:01 EST 1min 15s ago athena-flux.timer
+Sun 2026-11-22 19:54:33 EST     5min Sun 2026-11-22 19:39:33 EST      9min ago athena-gardien.timer
+Mon 2026-11-23 03:17:00 EST       7h Sun 2026-11-22 03:17:11 EST      16h ago athena-vault-backup.timer
+(extrait — 7 minuteurs au total, code de retour 0 sans tube)
+</code></pre>
+<p><strong>Vérifie</strong> : sept minuteurs <code>athena-*</code> chargés et leur prochaine exécution.</p>
+<p><strong>Piège évité</strong> : relevé ce jour, <code>systemctl list-timers … | head -8</code> donne un <strong>code 141</strong> (SIGPIPE) alors que les minuteurs vont bien. Un <code>head</code> ne doit jamais fournir le verdict d&rsquo;une preuve : on tronque la sortie après coup, pas le tube.</p></div>
+<div class="carte"><h3 id="f11-systemctl-is-active">F11 — <code>systemctl is-active …</code></h3>
+<pre><code>$ systemctl is-active athena-health.timer athena-health-web.service athena-vault-backup.timer athena-git-sync.timer
+active
+active
+active
+active
+</code></pre>
+<p><strong>Vérifie</strong> : les quatre unités interrogées sont actives au moment du relevé.</p>
+<p><strong>Piège évité</strong> : <code>is-active</code> décrit l&rsquo;état courant, <code>is-enabled</code> le démarrage au boot. Un code 3 signifie « inactif », ce n&rsquo;est pas une erreur système.</p></div>
+</div>
+<h2 id="6-réseau-local">6. Réseau local</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f12-ss--ltnp-grep--e-80808081">F12 — <code>ss -ltnp | grep -E ':8080|:8081'</code></h3>
+<pre><code>$ ss -ltnp | grep -E ':8080|:8081'
+LISTEN 0  5  127.0.0.1:8081  0.0.0.0:*  users:((&quot;python3&quot;,pid=240333,fd=3))
+LISTEN 0  50 [::ffff:127.0.0.1]:8080  *:* users:((&quot;signal-cli&quot;,pid=1157,fd=16))
+</code></pre>
+<p><strong>Vérifie</strong> : les ports d&rsquo;écoute et leurs processus, tous deux sur loopback.</p>
+<p><strong>Piège évité</strong> : un port ouvert ne prouve pas une réponse HTTP ; on le complète par la fiche F13. <code>-p</code> n&rsquo;affiche le PID que si l&rsquo;utilisateur en a le droit.</p></div>
+<div class="carte"><h3 id="f13-curl--s--o-devnull--w-httpcoden-1270018081">F13 — <code>curl -s -o /dev/null -w '%{http_code}\n' 127.0.0.1:8081/</code></h3>
+<pre><code>$ curl -s -o /dev/null -w '%{http_code}\n' 127.0.0.1:8081/
+200
+</code></pre>
+<p><strong>Vérifie</strong> : la page d&rsquo;accueil locale répond.</p>
+<p><strong>Piège évité</strong> : <code>-s</code> et <code>-o /dev/null</code> masquent le corps et les messages d&rsquo;erreur ; un <code>200</code> seul ne prouve pas le contenu, seulement la réponse. Sur ce Pi l&rsquo;IPv6 était cassé (double pile ~24 s) ; <code>/etc/gai.conf</code> met <code>precedence ::ffff:0:0/96 100</code> pour préférer IPv4. Ailleurs, forcer <code>curl -4</code>.</p></div>
+</div>
+<h2 id="7-santé-et-données">7. Santé et données</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f14-python3-syshealthstatuspy">F14 — <code>python3 sys/health_status.py</code></h3>
+<pre><code>$ python3 sys/health_status.py
+Dernier échantillon : 2026-11-22T19:48:48-05:00
+  température   42.8 °C   (24 h : min 38.9 / moy 41.84 / max 62.6)
+  throttled    0x0
+  tension cœur  0.7638 V
+  uptime        76.2 h   charge 0.21
+  disque        16.6 %   (24 h max 16.6 %)
+  unités en échec 0   wlan -64.0 dBm   ntp oui
+  échantillons 24 h : 1370   événements throttle : 0
+</code></pre>
+<p><strong>Vérifie</strong> : lecture consolidée de <code>data/health.db</code>, des unités systemd, de la température et du réseau.</p>
+<p><strong>Piège évité</strong> : le script <strong>lit</strong> la base, il ne la réécrit pas. Les alertes qu&rsquo;il affiche en fin de sortie sont historiques (18 et 21 novembre) : ne pas les confondre avec l&rsquo;état courant, qui est <code>0 unité en échec</code>.</p></div>
+<div class="carte"><h3 id="f15-select-count-from-samples">F15 — <code>select count(*) from samples</code></h3>
+<pre><code class="language-sql">select count(*) from samples
+</code></pre>
+<p><strong>Vérifie</strong> : le nombre d&rsquo;échantillons enregistrés, délégué à la base et non écrit à la main.</p>
+<p><strong>Piège évité</strong> : le moteur ouvre la base en URI <code>file:…?mode=ro</code> — lecture seule, le manifeste ne peut pas modifier ce qu&rsquo;il mesure. <code>count(*)</code> renvoie <code>0</code> sur une table vide ; ce n&rsquo;est pas la même chose qu&rsquo;une base absente.</p></div>
+</div>
+<h2 id="8-git-et-sauvegarde">8. Git et sauvegarde</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f16-git-bundle-verify-statevaultbundle">F16 — <code>git bundle verify state/vault.bundle</code></h3>
+<pre><code>$ git bundle verify state/vault.bundle
+The bundle contains these 2 refs:
+360336371e5fc79e55bbf95cb517f4f7d82fdad0 refs/heads/main
+360336371e5fc79e55bbf95cb517f4f7d82fdad0 HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
+</code></pre>
+<p><strong>Vérifie</strong> : le bundle du vault est lisible, complet et couvre l&rsquo;historique.</p>
+<p><strong>Piège évité</strong> : <code>verify</code> ne prouve pas que le dépôt se restaure réellement. La preuve du guide enchaîne <code>git clone</code> du bundle, <code>git fsck --full</code> et <code>sha256sum</code> d&rsquo;un fichier connu.</p></div>
+<div class="carte"><h3 id="f17-git-ls-files-grep--e-secretsenvseed">F17 — <code>git ls-files | grep -E 'secrets/|\.env|\.seed'</code></h3>
+<pre><code>$ git ls-files | grep -E 'secrets/|\.env|\.seed' || echo 'aucun secret versionné'
+aucun secret versionné
+</code></pre>
+<p><strong>Vérifie</strong> : aucun fichier sensible n&rsquo;est dans l&rsquo;index git.</p>
+<p><strong>Piège évité</strong> : sans le <code>|| echo</code>, <code>grep</code> renvoie le code <strong>1</strong> quand rien ne correspond (relevé : <code>rc=1</code>) — un « échec » qui est une bonne nouvelle. Le contenu d&rsquo;un secret ne doit jamais être affiché, seulement son absence constatée.</p></div>
+<div class="carte"><h3 id="f18-git-log--1---formath-ad-s---dateshort">F18 — <code>git log -1 --format='%h %ad %s' --date=short</code></h3>
+<pre><code>$ git log -1 --format='%h %ad %s' --date=short
+3d945a3 2026-11-22 sauvegarde auto 2026-11-22 18:55
+</code></pre>
+<p><strong>Vérifie</strong> : dernier commit, sa date courte et son objet.</p>
+<p><strong>Piège évité</strong> : sans <code>--date=short</code>, <code>%ad</code> produit une date verbeuse et dépendante de la locale, donc non reproductible d&rsquo;une machine à l&rsquo;autre.</p></div>
+</div>
+<h2 id="9-backlog">9. Backlog</h2>
+<div class="cartes">
+<div class="carte"><h3 id="f19-python3-sysbacklogpy-etat">F19 — <code>python3 sys/backlog.py etat</code></h3>
+<pre><code>$ python3 sys/backlog.py etat
+backlog : 129 tâches — {'fait': 42, 'bloqué': 3, 'prêt': 84}
+reste : 2495 min (41.6 h)
+prochaine : T30 — Référentiel de commandes
+</code></pre>
+<p><strong>Vérifie</strong> : l&rsquo;état réel lu dans <code>state/backlog/taches.json</code>, et la tâche suivante renvoyée par <code>python3 sys/backlog.py suivante</code> (ici <code>T30</code>).</p>
+<p><strong>Piège évité</strong> : <code>etat</code> donne les compteurs, <code>suivante</code> donne la tâche à exécuter. Une tâche <code>bloquée</code> n&rsquo;est pas une tâche <code>faite</code>. Ne pas recalculer le plan à la main : <code>state/plan.md</code> est régénéré depuis le JSON par script.</p></div>
+</div>
+<h2 id="10-règles-drsquoécriture-les-six-pièges-récapitulés">10. Règles d&rsquo;écriture — les six pièges récapitulés</h2>
+<ol>
+<li>Ne jamais corriger un échec avec <code>|| true</code> : le verdict « OK » perd tout sens.</li>
+<li><code>2&gt;/dev/null</code> masque le message, pas le code de retour : laissez le code apparaître.</li>
+<li>Ne pas faire d&rsquo;un <code>| head</code> une preuve : SIGPIPE 141 n&rsquo;est pas une panne du service.</li>
+<li>Sur Pi 5, <code>RPi.GPIO</code> s&rsquo;importe mais la couche utilise <code>lgpio</code>/<code>gpiod</code> ;<code>gpiodetect</code> liste cinq chips, le header est <code>gpiochip0</code>.</li>
+<li>Raisonner en BCM, pas en numéro de broche physique.</li>
+<li>Ne pas <code>echo</code> un chiffre : déléguer la mesure à une commande ou à un compteur SQL en <code>mode=ro</code>.</li>
+</ol>
+<p>Le détail du contrat est dans <a href="../../ressources/format-manifeste/">Format du manifeste de preuve</a>.</p>
+<h2 id="limites">Limites</h2>
+<p>Aucune mesure de tension au multimètre ni de résistance à l&rsquo;ohmmètre n&rsquo;a été faite : aucun instrument n&rsquo;est branché. Aucune sonde de famille <code>0x28</code> n&rsquo;est connectée : la ligne <code>crc=… YES</code> n&rsquo;a pas été observée ici. Les sorties ci-dessus sont un instantané du 22 novembre 2026 : ROMs 1-Wire, température, compteurs et PID changent d&rsquo;une exécution à l&rsquo;autre. Une commande vérifiée ici ne garantit pas qu&rsquo;elle donnera la même valeur demain — seulement qu&rsquo;elle mesure quelque chose de réel.</p>
+  </div>
+</article>
+</main>
+
+<footer class="pied">
+  <div class="conteneur">
+    <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
+    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
+       <a href="../../projets/">Projets</a>
+    </p>
+  </div>
+</footer>
+
+<script src="../../assets/site.js" defer></script>
+<script src="../../assets/widgets/adresse.js" defer></script>
+</body>
+</html>

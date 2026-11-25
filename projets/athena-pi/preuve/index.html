@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Preuve — Athéna Pi — Athéna</title>
 <meta name="description" content="État réel du Pi et de ses services, relevé à la construction de la page."><meta name="generator" content="Athéna — moteur de site statique">
-<link rel="canonical" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/">
-<link rel="alternate" hreflang="fr" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/"><link rel="alternate" hreflang="en" href="https://athena-rpi.github.io/athena-store/en/projets/athena-pi/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/">
+<link rel="canonical" href="https://athena-project.dev/projets/athena-pi/preuve/">
+<link rel="alternate" hreflang="fr" href="https://athena-project.dev/projets/athena-pi/preuve/"><link rel="alternate" hreflang="en" href="https://athena-project.dev/en/projets/athena-pi/preuve/"><link rel="alternate" hreflang="x-default" href="https://athena-project.dev/projets/athena-pi/preuve/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Athéna">
 <meta property="og:title" content="Preuve — Athéna Pi">
-<meta property="og:description" content="État réel du Pi et de ses services, relevé à la construction de la page."><meta property="og:url" content="https://athena-rpi.github.io/athena-store/projets/athena-pi/preuve/">
+<meta property="og:description" content="État réel du Pi et de ses services, relevé à la construction de la page."><meta property="og:url" content="https://athena-project.dev/projets/athena-pi/preuve/">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
@@ -35,7 +35,9 @@
         <li><a href="../../../">Accueil</a></li>
         <li><a href="../../../projets/">Projets</a></li>
         <li><a href="../../../demarrer/">Par où commencer</a></li>
+        <li><a href="../../../flux/">En direct</a></li>
         <li><a href="../../../a-propos/">À propos</a></li>
+        <li><a href="../../../transparence/">Transparence</a></li>
         <li><a href="../../../faq/">FAQ</a></li>
         <li><a href="../../../legal/">Mentions légales</a></li>
         <li><a href="../../../journal/">Journal</a></li>
@@ -59,7 +61,7 @@
 
   <header class="page-entete">
     <h1>Preuve — Athéna Pi</h1>
-<p class="lede">État réel du Pi et de ses services, relevé à la construction de la page.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-20</p>
+<p class="lede">État réel du Pi et de ses services, relevé à la construction de la page.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-25</p>
   </header>
 
   <div class="corps">
@@ -78,53 +80,79 @@ rien de ce qui est montré ici n&rsquo;est joignable depuis l&rsquo;extérieur.<
     <h2 id="tests">Tests</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_sante.py</p>
-      <p class="preuve-verdict ko">
-        <strong>12</strong> tests — timeout après 60 s      </p>
+      <p class="preuve-verdict ok">
+        <strong>12</strong> tests — OK      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-</code></pre>
+USDC/Ethereum ignoré : RPC indisponible
+USDC/Base ignoré : pop from empty list
+USDC/Ethereum ignoré : pop from empty list
+usage: python3 -m unittest [-h] [--type {html,json,pdf,texte}] [--json]
+                           [--timeout TIMEOUT] [--registre]
+                           [--fichier FICHIER]
+                           [url]
+python3 -m unittest: error: une URL, ou --registre, est requis
+----------------------------------------------------------------------
+Ran 795 tests in 14.645s
+
+OK (skipped=2)</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_surveillance.py</p>
-      <p class="preuve-verdict ko">
-        <strong>5</strong> tests — timeout après 60 s      </p>
+      <p class="preuve-verdict ok">
+        <strong>5</strong> tests — OK      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-</code></pre>
+USDC/Ethereum ignoré : RPC indisponible
+USDC/Base ignoré : pop from empty list
+USDC/Ethereum ignoré : pop from empty list
+usage: python3 -m unittest [-h] [--type {html,json,pdf,texte}] [--json]
+                           [--timeout TIMEOUT] [--registre]
+                           [--fichier FICHIER]
+                           [url]
+python3 -m unittest: error: une URL, ou --registre, est requis
+----------------------------------------------------------------------
+Ran 795 tests in 14.675s
+
+OK (skipped=2)</code></pre>
     </div>
 
     <h2 id="compteurs">Compteurs</h2>
     <table>
       <tr><th>Compteurs</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>2733</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>9346</code></td></tr>
     </table>
 
     <h2 id="commandes">Commandes</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-Dernier échantillon : 2026-11-20T15:31:34-05:00
-  température   44.4 °C   (24 h : min 38.4 / moy 41.19 / max 46.6)
   throttled    0x0
   tension cœur  0.8325 V
-  uptime        24.0 h   charge 1.05
-  mémoire dispo 13942.4 Mo   zram 0.0 Mo
-  disque        9.95 %   (24 h max 9.95 %)
-  unités en échec 0   wlan -63.0 dBm   ntp oui
-  échantillons 24 h : 1364   événements throttle : 0
+  uptime        139.7 h   charge 0.75
+  mémoire dispo 14051.8 Mo   zram 137.9 Mo
+  disque        20.63 %   (24 h max 21.94 %)
+  unités en échec 0   wlan -60.0 dBm   ntp oui
+  échantillons 24 h : 1377   événements throttle : 0
   alertes récentes :
+    2026-11-24T09:12:43-05:00  failed_units  1 unité(s) en échec
+    2026-11-21T18:55:03-05:00  failed_units  1 unité(s) en échec
     2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
     2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">Timers Athéna</p>
       <pre><code>systemctl list-timers &#39;athena-*&#39; --no-pager
-NEXT                             LEFT LAST                              PASSED UNIT                          ACTIVATES
-Fri 2026-11-20 15:32:34 EST      85ms Fri 2026-11-20 15:31:34 EST      59s ago athena-health.timer           athena-health.service
-Fri 2026-11-20 15:46:28 EST     13min Fri 2026-11-20 13:46:28 EST 1h 46min ago athena-git-sync.timer         athena-git-sync.service
-Sat 2026-11-21 03:17:00 EST       11h Fri 2026-11-20 03:17:08 EST      12h ago athena-vault-backup.timer     athena-vault-backup.service
-Sat 2026-11-21 04:47:00 EST       13h Fri 2026-11-20 04:47:11 EST      10h ago athena-site-maintenance.timer athena-site-maintenance.service
-Sun 2026-11-22 04:17:00 EST 1 day 12h Wed 2026-11-18 15:28:57 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
+…
+LAST                              PASSED UNIT                          ACTIVATES
+Wed 2026-11-25 11:14:47 EST    29s Wed 2026-11-25 11:13:47 EST      30s ago athena-health.timer           athena-health.service
+Wed 2026-11-25 11:15:00 EST    41s Wed 2026-11-25 11:12:01 EST 2min 16s ago athena-flux.timer             athena-flux.service
+Wed 2026-11-25 11:21:33 EST   7min Wed 2026-11-25 11:06:33 EST     7min ago athena-gardien.timer          athena-gardien.service
+Wed 2026-11-25 11:54:01 EST  39min Wed 2026-11-25 09:54:01 EST 1h 20min ago athena-git-sync.timer         athena-git-sync.service
+Wed 2026-11-25 12:00:00 EST  45min Wed 2026-11-25 11:00:01 EST    14min ago athena-llm-tourne.timer       athena-llm-tourne.service
+Thu 2026-11-26 03:17:00 EST    16h Wed 2026-11-25 03:17:03 EST       7h ago athena-vault-backup.timer     athena-vault-backup.service
+Thu 2026-11-26 04:47:00 EST    17h Wed 2026-11-25 04:47:11 EST       6h ago athena-site-maintenance.timer athena-site-maintenance.service
+Sun 2026-11-29 04:17:00 EST 3 days Sun 2026-11-22 04:17:11 EST   3 days ago athena-vault-doctor.timer     athena-vault-doctor.service
 
-5 timers listed.
+8 timers listed.
 Pass --all to see loaded but inactive timers, too.</code></pre>
     </div>
     <div class="preuve-bloc">
@@ -151,7 +179,7 @@ ffe4dfdaac3e7296b6f9ee71a520630bc70b1d04	HEAD</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
-    <p class="pied-meta">Adresses vérifiées le 2026-11-20 ·
+    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
        <a href="../../../projets/">Projets</a>
     </p>
   </div>
