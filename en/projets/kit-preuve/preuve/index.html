@@ -40,6 +40,7 @@
         <li><a href="../../../../en/transparence/">Transparency</a></li>
         <li><a href="../../../../en/faq/">FAQ</a></li>
         <li><a href="../../../../en/legal/">Legal</a></li>
+        <li><a href="../../../../en/parler/">Talk to Athena</a></li>
         <li><a href="../../../../en/journal/">Journal</a></li>
       </ul>
     </nav>
@@ -61,7 +62,7 @@
 
   <header class="page-entete">
     <h1>Proof — Proof page kit</h1>
-<p class="lede">The kit proven by itself — six sections reread at every site build.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-25</p>
+<p class="lede">The kit proven by itself — six sections reread at every site build.</p>      <p class="preuve-meta">Proof recalculated on 2026-11-27</p>
   </header>
 
   <div class="corps">
@@ -84,7 +85,7 @@ page proves the mechanism works here — not that a product is better than anoth
         <strong>11</strong> tests — OK      </p>
       <pre><code>python3 -m unittest tests.test_verifier_site -q
 ----------------------------------------------------------------------
-Ran 11 tests in 0.009s
+Ran 11 tests in 0.022s
 
 OK</code></pre>
     </div>
@@ -94,7 +95,7 @@ OK</code></pre>
         <strong>12</strong> tests — OK      </p>
       <pre><code>python3 -m unittest tests.test_sante -q
 ----------------------------------------------------------------------
-Ran 12 tests in 0.004s
+Ran 12 tests in 0.009s
 
 OK</code></pre>
     </div>
@@ -104,7 +105,7 @@ OK</code></pre>
         <strong>2</strong> tests — OK      </p>
       <pre><code>python3 -m unittest tests.test_preuves -q
 ----------------------------------------------------------------------
-Ran 2 tests in 0.006s
+Ran 2 tests in 0.013s
 
 OK</code></pre>
     </div>
@@ -112,8 +113,8 @@ OK</code></pre>
     <h2 id="compteurs">Counters</h2>
     <table>
       <tr><th>Counters</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé enregistrés sur le Pi</td><td><code>9346</code></td></tr>
-      <tr><td>Alertes enregistrées</td><td><code>4</code></td></tr>
+      <tr><td>Relevés de santé enregistrés sur le Pi</td><td><code>12641</code></td></tr>
+      <tr><td>Alertes enregistrées</td><td><code>12</code></td></tr>
     </table>
 
     <h2 id="commandes">Commands</h2>
@@ -130,7 +131,7 @@ Python 3.13.5</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier commit de la couche, relu dans le dépôt</p>
       <pre><code>git log -1 --format=&#39;%h %ad %s&#39; --date=short
-ccea6f1 2026-11-25 sauvegarde auto 2026-11-25 11:10</code></pre>
+6383f5d 2026-11-27 rapports: quatre synthèses vérifiées des backlogs et de la suite</code></pre>
     </div>
 
     <h2 id="fichiers">Files</h2>
@@ -143,8 +144,8 @@ ccea6f1 2026-11-25 sauvegarde auto 2026-11-25 11:10</code></pre>
       </tr>
       <tr>
         <td><code>store/noyau/verifier.py</code></td>
-        <td>4.6 Ko</td>
-        <td><code>d4789ca2af28</code></td>
+        <td>4.9 Ko</td>
+        <td><code>9e0f4d371cfc</code></td>
       </tr>
       <tr>
         <td><code>store/outils/site.py</code></td>
@@ -175,7 +176,7 @@ ccea6f1 2026-11-25 sauvegarde auto 2026-11-25 11:10</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Peer-to-peer payments: funds go straight to Athéna&#39;s wallet. No platform, no KYC.</p>
-    <p class="pied-meta">Addresses checked on 2026-11-25 ·
+    <p class="pied-meta">Addresses checked on 2026-11-27 ·
        <a href="../../../../en/projets/">Projects</a>
     </p>
   </div>
@@ -183,5 +184,6 @@ ccea6f1 2026-11-25 sauvegarde auto 2026-11-25 11:10</code></pre>
 
 <script src="../../../../assets/site.js" defer></script>
 <script src="../../../../assets/widgets/adresse.js" defer></script>
+<script src="../../../../assets/widgets/boite.js" defer></script>
 </body>
 </html>

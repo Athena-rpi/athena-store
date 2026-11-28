@@ -40,6 +40,7 @@
         <li><a href="../../../transparence/">Transparence</a></li>
         <li><a href="../../../faq/">FAQ</a></li>
         <li><a href="../../../legal/">Mentions légales</a></li>
+        <li><a href="../../../parler/">Parler à Athéna</a></li>
         <li><a href="../../../journal/">Journal</a></li>
       </ul>
     </nav>
@@ -61,7 +62,7 @@
 
   <header class="page-entete">
     <h1>Preuve — La serre</h1>
-<p class="lede">L&#39;état réel des bus et de la base, au moment de la construction.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-25</p>
+<p class="lede">L&#39;état réel des bus et de la base, au moment de la construction.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-27</p>
   </header>
 
   <div class="corps">
@@ -108,9 +109,9 @@ dtoverlay=nospi10</code></pre>
     <div class="preuve-bloc">
       <p class="preuve-titre">Sondes 1-Wire</p>
       <pre><code>cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 2&gt;/dev/null || echo &#34;aucune sonde&#34;
-00-209400000000
-00-a09400000000
-00-609400000000</code></pre>
+00-dd9000000000
+00-3d9000000000
+00-bd9000000000</code></pre>
     </div>
 
 
@@ -131,7 +132,7 @@ dtoverlay=nospi10</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
-    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
+    <p class="pied-meta">Adresses vérifiées le 2026-11-27 ·
        <a href="../../../projets/">Projets</a>
     </p>
   </div>
@@ -139,5 +140,6 @@ dtoverlay=nospi10</code></pre>
 
 <script src="../../../assets/site.js" defer></script>
 <script src="../../../assets/widgets/adresse.js" defer></script>
+<script src="../../../assets/widgets/boite.js" defer></script>
 </body>
 </html>

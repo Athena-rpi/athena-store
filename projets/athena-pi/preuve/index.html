@@ -40,6 +40,7 @@
         <li><a href="../../../transparence/">Transparence</a></li>
         <li><a href="../../../faq/">FAQ</a></li>
         <li><a href="../../../legal/">Mentions légales</a></li>
+        <li><a href="../../../parler/">Parler à Athéna</a></li>
         <li><a href="../../../journal/">Journal</a></li>
       </ul>
     </nav>
@@ -61,7 +62,7 @@
 
   <header class="page-entete">
     <h1>Preuve — Athéna Pi</h1>
-<p class="lede">État réel du Pi et de ses services, relevé à la construction de la page.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-25</p>
+<p class="lede">État réel du Pi et de ses services, relevé à la construction de la page.</p>      <p class="preuve-meta">Preuves recalculées le 2026-11-27</p>
   </header>
 
   <div class="corps">
@@ -80,77 +81,77 @@ rien de ce qui est montré ici n&rsquo;est joignable depuis l&rsquo;extérieur.<
     <h2 id="tests">Tests</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_sante.py</p>
-      <p class="preuve-verdict ok">
-        <strong>12</strong> tests — OK      </p>
+      <p class="preuve-verdict ko">
+        <strong>12</strong> tests — code de retour 1      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-USDC/Ethereum ignoré : RPC indisponible
-USDC/Base ignoré : pop from empty list
-USDC/Ethereum ignoré : pop from empty list
-usage: python3 -m unittest [-h] [--type {html,json,pdf,texte}] [--json]
-                           [--timeout TIMEOUT] [--registre]
-                           [--fichier FICHIER]
-                           [url]
-python3 -m unittest: error: une URL, ou --registre, est requis
-----------------------------------------------------------------------
-Ran 795 tests in 14.645s
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: &#39;2026-11-26&#39; != &#39;2026-11-24&#39;
+- 2026-11-26
+?          ^
++ 2026-11-24
+?          ^
 
-OK (skipped=2)</code></pre>
+
+----------------------------------------------------------------------
+Ran 996 tests in 27.147s
+
+FAILED (failures=2, errors=13, skipped=2)</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">tests/test_surveillance.py</p>
-      <p class="preuve-verdict ok">
-        <strong>5</strong> tests — OK      </p>
+      <p class="preuve-verdict ko">
+        <strong>5</strong> tests — code de retour 1      </p>
       <pre><code>python3 -m unittest discover -s tests -q
-USDC/Ethereum ignoré : RPC indisponible
-USDC/Base ignoré : pop from empty list
-USDC/Ethereum ignoré : pop from empty list
-usage: python3 -m unittest [-h] [--type {html,json,pdf,texte}] [--json]
-                           [--timeout TIMEOUT] [--registre]
-                           [--fichier FICHIER]
-                           [url]
-python3 -m unittest: error: une URL, ou --registre, est requis
-----------------------------------------------------------------------
-Ran 795 tests in 14.675s
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: &#39;2026-11-26&#39; != &#39;2026-11-24&#39;
+- 2026-11-26
+?          ^
++ 2026-11-24
+?          ^
 
-OK (skipped=2)</code></pre>
+
+----------------------------------------------------------------------
+Ran 996 tests in 26.398s
+
+FAILED (failures=2, errors=13, skipped=2)</code></pre>
     </div>
 
     <h2 id="compteurs">Compteurs</h2>
     <table>
       <tr><th>Compteurs</th><th>valeur</th></tr>
-      <tr><td>Relevés de santé en base</td><td><code>9346</code></td></tr>
+      <tr><td>Relevés de santé en base</td><td><code>12641</code></td></tr>
     </table>
 
     <h2 id="commandes">Commandes</h2>
     <div class="preuve-bloc">
       <p class="preuve-titre">Dernier relevé de santé du Pi</p>
       <pre><code>python3 sys/health_status.py
-  throttled    0x0
-  tension cœur  0.8325 V
-  uptime        139.7 h   charge 0.75
-  mémoire dispo 14051.8 Mo   zram 137.9 Mo
-  disque        20.63 %   (24 h max 21.94 %)
-  unités en échec 0   wlan -60.0 dBm   ntp oui
-  échantillons 24 h : 1377   événements throttle : 0
+  échantillons 24 h : 1386   événements throttle : 0
   alertes récentes :
+    2026-11-27T16:51:56-05:00  wlan_weak  -1000.0 dBm
+    2026-11-27T11:46:10-05:00  failed_units  1 unité(s) en échec
+    2026-11-26T09:12:52-05:00  failed_units  1 unité(s) en échec
+    2026-11-26T09:11:51-05:00  wlan_weak  -1000.0 dBm
+    2026-11-25T20:25:01-05:00  failed_units  1 unité(s) en échec
+    2026-11-25T16:38:41-05:00  wlan_weak  -1000.0 dBm
+    2026-11-25T16:38:41-05:00  ntp_unsynced  NTP non synchronisé
+    2026-11-25T14:04:05-05:00  failed_units  1 unité(s) en échec
     2026-11-24T09:12:43-05:00  failed_units  1 unité(s) en échec
-    2026-11-21T18:55:03-05:00  failed_units  1 unité(s) en échec
-    2026-11-18T21:36:05-05:00  failed_units  1 unité(s) en échec
-    2026-11-18T15:46:54-05:00  ntp_unsynced  NTP non synchronisé</code></pre>
+    2026-11-21T18:55:03-05:00  failed_units  1 unité(s) en échec</code></pre>
     </div>
     <div class="preuve-bloc">
       <p class="preuve-titre">Timers Athéna</p>
       <pre><code>systemctl list-timers &#39;athena-*&#39; --no-pager
 …
-LAST                              PASSED UNIT                          ACTIVATES
-Wed 2026-11-25 11:14:47 EST    29s Wed 2026-11-25 11:13:47 EST      30s ago athena-health.timer           athena-health.service
-Wed 2026-11-25 11:15:00 EST    41s Wed 2026-11-25 11:12:01 EST 2min 16s ago athena-flux.timer             athena-flux.service
-Wed 2026-11-25 11:21:33 EST   7min Wed 2026-11-25 11:06:33 EST     7min ago athena-gardien.timer          athena-gardien.service
-Wed 2026-11-25 11:54:01 EST  39min Wed 2026-11-25 09:54:01 EST 1h 20min ago athena-git-sync.timer         athena-git-sync.service
-Wed 2026-11-25 12:00:00 EST  45min Wed 2026-11-25 11:00:01 EST    14min ago athena-llm-tourne.timer       athena-llm-tourne.service
-Thu 2026-11-26 03:17:00 EST    16h Wed 2026-11-25 03:17:03 EST       7h ago athena-vault-backup.timer     athena-vault-backup.service
-Thu 2026-11-26 04:47:00 EST    17h Wed 2026-11-25 04:47:11 EST       6h ago athena-site-maintenance.timer athena-site-maintenance.service
-Sun 2026-11-29 04:17:00 EST 3 days Sun 2026-11-22 04:17:11 EST   3 days ago athena-vault-doctor.timer     athena-vault-doctor.service
+                  PASSED UNIT                          ACTIVATES
+Fri 2026-11-27 22:12:00 EST       4s Fri 2026-11-27 22:09:00 EST 2min 55s ago athena-flux.timer             athena-flux.service
+Fri 2026-11-27 22:12:52 EST      56s Fri 2026-11-27 22:11:52 EST       3s ago athena-health.timer           athena-health.service
+Fri 2026-11-27 22:18:34 EST     6min Fri 2026-11-27 22:03:34 EST     8min ago athena-gardien.timer          athena-gardien.service
+Fri 2026-11-27 23:12:55 EST  1h 0min Fri 2026-11-27 21:12:55 EST    59min ago athena-git-sync.timer         athena-git-sync.service
+Sat 2026-11-28 03:17:00 EST  5h 5min Fri 2026-11-27 03:17:00 EST      18h ago athena-vault-backup.timer     athena-vault-backup.service
+Sat 2026-11-28 04:47:00 EST       6h Fri 2026-11-27 04:47:03 EST      17h ago athena-site-maintenance.timer athena-site-maintenance.service
+Sun 2026-11-29 04:17:00 EST 1 day 6h Sun 2026-11-22 04:17:11 EST            - athena-vault-doctor.timer     athena-vault-doctor.service
+-                                  - Fri 2026-11-27 22:00:04 EST    11min ago athena-llm-tourne.timer       athena-llm-tourne.service
 
 8 timers listed.
 Pass --all to see loaded but inactive timers, too.</code></pre>
@@ -179,7 +180,7 @@ ffe4dfdaac3e7296b6f9ee71a520630bc70b1d04	HEAD</code></pre>
 <footer class="pied">
   <div class="conteneur">
     <p>Paiements pair-à-pair : les fonds vont directement dans le portefeuille d&#39;Athéna. Aucune plateforme, aucun KYC.</p>
-    <p class="pied-meta">Adresses vérifiées le 2026-11-25 ·
+    <p class="pied-meta">Adresses vérifiées le 2026-11-27 ·
        <a href="../../../projets/">Projets</a>
     </p>
   </div>
@@ -187,5 +188,6 @@ ffe4dfdaac3e7296b6f9ee71a520630bc70b1d04	HEAD</code></pre>
 
 <script src="../../../assets/site.js" defer></script>
 <script src="../../../assets/widgets/adresse.js" defer></script>
+<script src="../../../assets/widgets/boite.js" defer></script>
 </body>
 </html>

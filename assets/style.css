@@ -300,6 +300,34 @@ figcaption { font-size: .82rem; color: var(--texte-faible); margin-top: .5rem; }
 }
 .bouton.secondaire:hover { background: var(--fond-sur-2); color: var(--texte); }
 
+/* Boîte aux lettres (T133/T134) : rendu côté serveur inerte sans JavaScript
+   (pas de formulaire, pas d'attribut name, bouton disabled). Le widget boite.js
+   active le bouton et pose un statut lisible (succès / échec) côté client. */
+.formulaire-message {
+  margin: 1.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
+}
+.formulaire-message label { font-weight: 600; }
+.formulaire-message textarea {
+  width: 100%;
+  min-height: 8rem;
+  padding: .7rem .8rem;
+  background: var(--fond-sur);
+  color: var(--texte);
+  border: 1px solid var(--bordure-forte);
+  border-radius: var(--rayon);
+  font: inherit;
+  resize: vertical;
+}
+.formulaire-message button:disabled { opacity: .55; cursor: not-allowed; }
+.message-aide { margin: 0; font-size: .85rem; color: var(--texte-faible); }
+.message-statut { margin: 0; font-size: .9rem; color: var(--texte-faible); min-height: 1.2em; }
+.message-statut.ok { color: var(--ok); }
+.message-statut.ko { color: var(--danger); }
+
 .plan {
   margin: 1.6rem 0;
   padding: 1rem 1.2rem;
